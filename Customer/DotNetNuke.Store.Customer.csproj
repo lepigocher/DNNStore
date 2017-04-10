@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BCB0DBD-6F52-4481-92C2-901CB78A21D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNetNuke.Modules.Store.Customer</RootNamespace>
+    <AssemblyName>DotNetNuke.Modules.Store.Customer</AssemblyName>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke, Version=4.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\DotNetNuke.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerInfo.cs" />
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="DownloadInfo.cs" />
+    <Compile Include="OrderController.cs" />
+    <Compile Include="OrderDetailInfo.cs" />
+    <Compile Include="OrderDetailTokenReplace.cs" />
+    <Compile Include="OrderInfo.cs" />
+    <Compile Include="OrderStatus.cs" />
+    <Compile Include="OrderTokenReplace.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Components\DotNetNuke.Store.Components.csproj">
+      <Project>{933F85DC-00FE-494A-8604-F8C5D62F85DD}</Project>
+      <Name>DotNetNuke.Store.Components</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)Store_02.00.00_Install
+if not exist $(SolutionDir)Store_02.00.00_Source\Customer md $(SolutionDir)Store_02.00.00_Source\Customer
+copy $(ProjectPath) $(SolutionDir)Store_02.00.00_Source\Customer
+copy $(ProjectDir)*.cs $(SolutionDir)Store_02.00.00_Source\Customer
+if not exist $(SolutionDir)Store_02.00.00_Source\Customer\Properties md $(SolutionDir)Store_02.00.00_Source\Customer\Properties
+copy $(ProjectDir)Properties\*.cs $(SolutionDir)Store_02.00.00_Source\Customer\Properties
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

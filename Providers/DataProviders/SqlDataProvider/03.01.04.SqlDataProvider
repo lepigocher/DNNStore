@@ -1,0 +1,647 @@
+IF NOT EXISTS (SELECT sc.[id] FROM {databaseOwner}[sysobjects] so INNER JOIN {databaseOwner}[syscolumns] sc ON so.[id]=sc.[id] WHERE so.[name]=N'{objectQualifier}Store_Administration' AND sc.[name]=N'AllowCoupons')
+ALTER TABLE {databaseOwner}[{objectQualifier}Store_Administration] ADD AllowCoupons bit NOT NULL CONSTRAINT DF_{objectQualifier}Store_Administration_AllowCoupons DEFAULT (0);
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Administration_AddStoreInfo]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Administration_AddStoreInfo]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Administration_AddStoreInfo]
+		@PortalID int,
+		@Name nvarchar(100),
+		@Description nvarchar(1000),
+		@Keywords nvarchar(1000),
+		@SEOFeature bit,
+		@GatewayName nvarchar(1000),
+		@GatewaySettings ntext,
+		@DefaultEmailAddress nvarchar(50),
+		@ShoppingCartPageID int,
+		@CreatedByUser nvarchar(100),
+		@StorePageID int,
+		@CurrencySymbol nvarchar(3),
+		@PortalTemplates bit,
+		@StyleSheet nvarchar(255),
+		@AuthorizeCancel bit,
+		@InventoryManagement bit,
+		@OutOfStock int,
+		@ProductsBehavior int,
+		@AvoidNegativeStock bit,
+		@OrderRoleID int,
+		@CatalogRoleID int,
+		@SecureCookie bit,
+		@CheckoutMode int,
+		@ImpersonatedUserID int,
+		@NoDelivery bit,
+		@AllowVirtualProducts bit,
+		@AllowCoupons bit,
+		@TaxName nvarchar(100),
+		@ShippingName nvarchar(100),
+		@AddressName nvarchar(100)
+	AS
+	SET NOCOUNT ON
+
+	INSERT INTO {databaseOwner}{objectQualifier}Store_Administration
+		(PortalID, [Name], [Description], Keywords, SEOFeature, GatewayName, GatewaySettings, DefaultEmailAddress, ShoppingCartPageID, CreatedByUser, CreatedDate, StorePageID, CurrencySymbol, PortalTemplates, StyleSheet, AuthorizeCancel, InventoryManagement, OutOfStock, ProductsBehavior, OrderRoleID, CatalogRoleID, SecureCookie, CheckoutMode, ImpersonatedUserID, NoDelivery, AllowVirtualProducts, AvoidNegativeStock, AllowCoupons, TaxName, ShippingName, AddressName)
+	VALUES
+		(@PortalID, @Name, @Description, @Keywords, @SEOFeature, @GatewayName, @GatewaySettings, @DefaultEmailAddress, @ShoppingCartPageID, @CreatedByUser, getdate(), @StorePageID, @CurrencySymbol, @PortalTemplates, @StyleSheet, @AuthorizeCancel, @InventoryManagement, @OutOfStock, @ProductsBehavior, @OrderRoleID, @CatalogRoleID, @SecureCookie, @CheckoutMode, @ImpersonatedUserID, @NoDelivery, @AllowVirtualProducts, @AvoidNegativeStock, @AllowCoupons, @TaxName, @ShippingName, @AddressName)
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Administration_GetStoreInfo]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Administration_GetStoreInfo]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Administration_GetStoreInfo]
+		@PortalID int
+	AS
+	SET NOCOUNT ON
+	SELECT PortalID, [Name], [Description], Keywords, SEOFeature, GatewayName, GatewaySettings, DefaultEmailAddress, ShoppingCartPageID, CreatedByUser, CreatedDate, StorePageID, CurrencySymbol, PortalTemplates, StyleSheet, AuthorizeCancel, InventoryManagement, OutOfStock, ProductsBehavior, AvoidNegativeStock, OrderRoleID, CatalogRoleID, SecureCookie, CheckoutMode, ImpersonatedUserID, NoDelivery, AllowVirtualProducts, AllowCoupons, TaxName, ShippingName, AddressName
+	FROM 	{databaseOwner}{objectQualifier}Store_Administration
+	WHERE	PortalID = @PortalID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Administration_UpdateStoreInfo]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Administration_UpdateStoreInfo]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Administration_UpdateStoreInfo]
+		@PortalID int,
+		@Name nvarchar(100),
+		@Description nvarchar(1000),
+		@Keywords nvarchar(1000),
+		@SEOFeature bit,
+		@GatewayName nvarchar(1000),
+		@GatewaySettings ntext,
+		@DefaultEmailAddress nvarchar(50),
+		@ShoppingCartPageID int,
+		@StorePageID int,
+		@CurrencySymbol nvarchar(3),
+		@PortalTemplates bit,
+		@StyleSheet nvarchar(255),
+		@AuthorizeCancel bit,
+		@InventoryManagement bit,
+		@OutOfStock int,
+		@ProductsBehavior int,
+		@AvoidNegativeStock bit,
+		@OrderRoleID int,
+		@CatalogRoleID int,
+		@SecureCookie bit,
+		@CheckoutMode int,
+		@ImpersonatedUserID int,
+		@NoDelivery bit,
+		@AllowVirtualProducts bit,
+		@AllowCoupons bit,
+		@TaxName nvarchar(100),
+		@ShippingName nvarchar(100),
+		@AddressName nvarchar(100)
+	AS
+	SET NOCOUNT ON
+
+	UPDATE 	{databaseOwner}{objectQualifier}Store_Administration SET
+		[Name] = @Name,
+		[Description] = @Description,
+		Keywords = @Keywords,
+		SEOFeature = @SEOFeature,
+		GatewayName = @GatewayName,
+		GatewaySettings = @GatewaySettings,
+		DefaultEmailAddress = @DefaultEmailAddress,
+		ShoppingCartPageID = @ShoppingCartPageID,
+		StorePageID = @StorePageID,
+		CurrencySymbol = @CurrencySymbol,
+		PortalTemplates = @PortalTemplates,
+		StyleSheet = @StyleSheet,
+		AuthorizeCancel = @AuthorizeCancel,
+		InventoryManagement = @InventoryManagement,
+		OutOfStock = @OutOfStock,
+		ProductsBehavior = @ProductsBehavior,
+		OrderRoleID = @OrderRoleID,
+		CatalogRoleID = @CatalogRoleID,
+		SecureCookie = @SecureCookie,
+		CheckoutMode = @CheckoutMode,
+		ImpersonatedUserID = @ImpersonatedUserID,
+		NoDelivery = @NoDelivery,
+		AllowVirtualProducts = @AllowVirtualProducts,
+		AvoidNegativeStock = @AvoidNegativeStock,
+		AllowCoupons = @AllowCoupons,
+		TaxName = @TaxName,
+		ShippingName = @ShippingName,
+		AddressName = @AddressName
+	WHERE	PortalID = @PortalID
+GO
+
+IF NOT EXISTS (SELECT sc.[id] FROM {databaseOwner}[sysobjects] so INNER JOIN {databaseOwner}[syscolumns] sc ON so.[id]=sc.[id] WHERE so.[name]=N'{objectQualifier}Store_Orders' AND sc.[name]=N'CouponID')
+ALTER TABLE {databaseOwner}[{objectQualifier}Store_Orders] ADD CouponID int NULL, Discount money NULL;
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Orders_CreateOrder]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_CreateOrder]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_CreateOrder]
+		@CartID nvarchar(50)
+	AS 
+	SET NOCOUNT ON
+
+	DECLARE @OrderID int
+	DECLARE @OrderDate datetime
+ 
+	SELECT @OrderDate = getDate()
+ 
+	INSERT INTO {databaseOwner}{objectQualifier}Store_Orders
+		(UserID, PortalID, OrderNumber, OrderDate, ShipDate, ShippingAddressID, BillingAddressID)
+	SELECT UserID, PortalID, '', @OrderDate, @OrderDate, -1, -1
+	FROM {databaseOwner}{objectQualifier}Store_Cart
+	WHERE CartID = @CartID
+ 
+	SELECT @OrderID = SCOPE_IDENTITY()
+ 
+	INSERT INTO {databaseOwner}{objectQualifier}Store_OrderDetails
+		(OrderID, ProductID, Quantity, UnitCost, RoleID)
+	SELECT @OrderID, ci.ProductID, ci.Quantity, CASE WHEN GETDATE() BETWEEN pr.SaleStartDate AND pr.SaleEndDate AND pr.SalePrice IS NOT NULL THEN pr.SalePrice ELSE pr.UnitCost END AS 'UnitCost', pr.RoleID
+	FROM {databaseOwner}{objectQualifier}Store_CartItems ci, {databaseOwner}{objectQualifier}Store_Products pr
+	WHERE ci.ProductID = pr.ProductID
+	AND ci.CartID = @CartID
+ 
+	SELECT  
+		o.OrderID,
+		o.UserID as CustomerID,
+		Cast(sum(od.Quantity*od.UnitCost) as money) as OrderTotal,
+		o.OrderNumber,
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	FROM {databaseOwner}{objectQualifier}Store_Orders o, {databaseOwner}{objectQualifier}Store_OrderDetails od 
+	WHERE o.OrderID = od.OrderID
+	AND o.OrderID = @OrderID
+	GROUP BY    
+		o.UserID, 
+		o.OrderID,
+		o.OrderNumber, 
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	HAVING o.OrderID = @OrderID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Orders_GetCustomerOrders]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_GetCustomerOrders]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_GetCustomerOrders]
+    @PortalID int = 0,
+    @UserID int
+AS
+	SET NOCOUNT ON
+
+	SELECT  
+		o.OrderID,
+		o.UserID As CustomerID,
+		Cast(sum(od.Quantity*od.UnitCost) as money) as OrderTotal,
+		o.OrderNumber,
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	FROM    
+		{databaseOwner}{objectQualifier}Store_Orders o INNER JOIN {databaseOwner}{objectQualifier}Store_OrderDetails od ON o.OrderID = od.OrderID
+	WHERE 
+		o.OrderIsPlaced = 1 AND o.PortalID = @PortalID
+	GROUP BY    
+		o.UserID, 
+		o.OrderID, 
+		o.OrderNumber,
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	HAVING  
+		o.UserID = @UserID
+	ORDER BY o.OrderDate DESC
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Orders_GetOrder]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_GetOrder]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_GetOrder]
+    @PortalID int,
+    @OrderID int
+AS
+	SET NOCOUNT ON
+
+	SELECT  
+		o.OrderID,
+		o.UserID as CustomerID,
+		Cast(sum(od.Quantity*od.UnitCost) as money) as OrderTotal,
+		o.OrderNumber,
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	FROM    
+		{databaseOwner}{objectQualifier}Store_Orders o INNER JOIN {databaseOwner}{objectQualifier}Store_OrderDetails od ON o.OrderID = od.OrderID
+	GROUP BY    
+		UserID, 
+		o.OrderID, 
+		o.PortalID,
+		o.OrderNumber,
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	HAVING  
+		o.OrderID = @OrderID AND o.PortalID=@PortalID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Orders_GetOrdersByStatusID]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_GetOrdersByStatusID]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_GetOrdersByStatusID]
+	@PortalID int,
+	@OrderStatusID int
+AS
+	SET NOCOUNT ON
+
+	SELECT  
+		o.OrderID,
+		o.UserID As CustomerID,
+		Cast(sum(od.Quantity*od.UnitCost) as money) as OrderTotal,
+		o.OrderNumber,
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	FROM    
+		{databaseOwner}{objectQualifier}Store_Orders o INNER JOIN {databaseOwner}{objectQualifier}Store_OrderDetails od ON o.OrderID = od.OrderID
+	WHERE 
+		o.OrderIsPlaced = 1
+		AND o.PortalID = @PortalID
+		AND o.OrderStatusID = @OrderStatusID
+	GROUP BY    
+		UserID, 
+		o.OrderID, 
+		o.OrderNumber,
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	ORDER BY o.OrderDate DESC
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Orders_UpdateOrder]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_UpdateOrder]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_UpdateOrder]
+		@OrderID int,
+		@OrderDate DateTime,
+		@OrderNumber nvarchar(50),
+		@ShippingAddressID int,
+		@BillingAddressID int,
+		@Tax money,
+		@ShippingCost money,
+		@CouponID int,
+		@Discount money,
+		@OrderIsPlaced bit = 0,
+		@OrderStatusID int = 1,
+		@UserID int
+AS
+	SET NOCOUNT ON
+
+	UPDATE {databaseOwner}{objectQualifier}Store_Orders
+	SET
+		OrderNumber = @OrderNumber,
+		OrderDate = @OrderDate,
+		ShipDate = GetDate(),
+		ShippingAddressID = @ShippingAddressID,
+		BillingAddressID = @BillingAddressID,
+		Tax = @Tax,
+		ShippingCost = @ShippingCost,
+		CouponID = @CouponID,
+		Discount = @Discount,
+		OrderIsPlaced = @OrderIsPlaced,
+		OrderStatusID = @OrderStatusID,
+		UserID = @UserID
+	WHERE OrderID = @OrderID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Orders_UpdateOrderDetails]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_UpdateOrderDetails]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_UpdateOrderDetails]
+		@OrderID int, 
+		@CartID nvarchar(50)
+	AS
+	SET NOCOUNT ON
+	
+	-- Remove the current order details from the order
+	DELETE FROM {databaseOwner}{objectQualifier}Store_OrderDetails
+	WHERE OrderId = @OrderID
+
+	-- Insert the new order details from the specified cart
+	INSERT INTO {databaseOwner}{objectQualifier}Store_OrderDetails
+		(OrderID, ProductID, Quantity, UnitCost, RoleID)
+	SELECT @OrderID, ci.ProductID, ci.Quantity, CASE WHEN GETDATE() BETWEEN pr.SaleStartDate AND pr.SaleEndDate AND pr.SalePrice IS NOT NULL THEN pr.SalePrice ELSE pr.UnitCost END AS 'UnitCost', pr.RoleID
+	FROM {databaseOwner}{objectQualifier}Store_CartItems ci, {databaseOwner}{objectQualifier}Store_Products pr
+	WHERE ci.ProductID = pr.ProductID
+	AND ci.CartID = @CartID
+
+	-- Return the updated Order
+	SELECT  
+		o.OrderID,
+		o.UserID as CustomerID,
+		Cast(sum(od.Quantity*od.UnitCost) as money) as OrderTotal,
+		o.OrderNumber,
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	FROM {databaseOwner}{objectQualifier}Store_Orders o, {databaseOwner}{objectQualifier}Store_OrderDetails od 
+	WHERE o.OrderID = od.OrderID
+	AND o.OrderID = @OrderID
+	GROUP BY    
+		o.UserID, 
+		o.OrderID,
+		o.OrderNumber, 
+		o.OrderDate, 
+		o.ShipDate,
+		o.ShippingAddressID,
+		o.BillingAddressID,
+		o.Tax,
+		o.ShippingCost,
+		o.OrderStatusID,
+		o.CouponID,
+		o.Discount
+	HAVING o.OrderID = @OrderID
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Orders_CountCouponUsage]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_CountCouponUsage]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_CountCouponUsage]
+    @PortalID int,
+    @UserID int,
+    @CouponID int,
+    @OrderID int
+AS
+	SET NOCOUNT ON
+
+	SELECT COUNT(*) FROM {databaseOwner}{objectQualifier}Store_Orders o
+	WHERE o.PortalID = @PortalID AND o.UserID = @UserID AND o.CouponID = @CouponID AND o.OrderID <> @OrderID AND o.OrderIsPlaced = 1
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Orders_GetTotalOrdered]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_GetTotalOrdered]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Orders_GetTotalOrdered]
+    @PortalID int,
+    @UserID int
+AS
+	SET NOCOUNT ON
+
+	SELECT  
+		Cast(sum(od.Quantity*od.UnitCost) as money)
+	FROM    
+		{databaseOwner}{objectQualifier}Store_Orders o INNER JOIN {databaseOwner}{objectQualifier}Store_OrderDetails od ON o.OrderID = od.OrderID
+	GROUP BY
+		o.PortalID,
+		o.UserID,
+		o.OrderIsPlaced
+	HAVING  
+		o.PortalID = @PortalID AND o.UserID = @UserID AND o.OrderIsPlaced = 1
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_CartItems_GetItem]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_CartItems_GetItem]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_CartItems_GetItem]
+		@ItemID int
+	AS
+
+	SET NOCOUNT ON
+
+	SELECT	ci.ItemID, ci.CartID, pr.CategoryID, ci.ProductID, pr.Manufacturer, pr.ModelNumber, pr.ModelName, pr.ProductImage, CASE WHEN GETDATE() BETWEEN pr.SaleStartDate AND pr.SaleEndDate AND pr.SalePrice IS NOT NULL THEN pr.SalePrice ELSE pr.UnitCost END AS 'UnitCost', ci.Quantity, ci.DateCreated, pr.ProductWeight AS 'ProductWeight', pr.ProductHeight AS 'ProductHeight', pr.ProductLength AS 'ProductLength', pr.ProductWidth AS 'ProductWidth'
+	FROM 	{databaseOwner}{objectQualifier}Store_CartItems ci,
+		{databaseOwner}{objectQualifier}Store_Products pr
+	WHERE	ci.ProductID = pr.ProductID
+	AND	ci.ItemID = @ItemID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_CartItems_GetItems]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_CartItems_GetItems]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_CartItems_GetItems]
+		@CartID nvarchar(50)
+	AS
+
+	SET NOCOUNT ON
+
+	DELETE {databaseOwner}{objectQualifier}Store_CartItems
+	WHERE ProductID IN (SELECT ProductID FROM {databaseOwner}{objectQualifier}Store_Products WHERE Archived = 1)
+		AND CartID = @CartID
+
+	SELECT	ci.ItemID, ci.CartID, pr.CategoryID, ci.ProductID, pr.Manufacturer, pr.ModelNumber, pr.ModelName, pr.ProductImage, CASE WHEN GETDATE() BETWEEN pr.SaleStartDate AND pr.SaleEndDate AND pr.SalePrice IS NOT NULL THEN pr.SalePrice ELSE pr.UnitCost END AS 'UnitCost', ci.Quantity, ci.DateCreated, pr.ProductWeight AS 'ProductWeight', pr.ProductHeight AS 'ProductHeight', pr.ProductLength AS 'ProductLength', pr.ProductWidth AS 'ProductWidth'
+	FROM 	{databaseOwner}{objectQualifier}Store_CartItems ci,
+		{databaseOwner}{objectQualifier}Store_Products pr
+	WHERE	ci.ProductID = pr.ProductID
+	AND	ci.CartID = @CartID
+GO
+
+IF NOT EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}{objectQualifier}Store_Coupons') AND OBJECTPROPERTY(id, N'IsTable') = 1)
+CREATE TABLE {databaseOwner}[{objectQualifier}Store_Coupons] (
+	CouponID int NOT NULL IDENTITY (1, 1),
+	PortalID int NOT NULL,
+	Code nvarchar(10) NOT NULL,
+	Description nvarchar(255) NOT NULL,
+	RuleType int NOT NULL,
+	RuleAmount money NULL,
+	DiscountType int NOT NULL,
+	DiscountPercentage int NULL,
+	DiscountAmount money NULL,
+	ApplyTo int NOT NULL,
+	ItemID int NULL,
+	StartDate datetime NOT NULL,
+	EndDate datetime NOT NULL,
+	Validity int NOT NULL,
+	CreatedByUserID int NOT NULL,
+	CreatedDate datetime NOT NULL
+	) 
+GO
+
+IF NOT EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}{objectQualifier}Store_Coupons') AND OBJECTPROPERTY(id, N'IsPrimaryKey') = 1)
+ALTER TABLE {databaseOwner}[{objectQualifier}Store_Coupons] ADD CONSTRAINT
+	PK_{objectQualifier}Store_Coupons PRIMARY KEY CLUSTERED (CouponID)
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_AddCoupon]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_AddCoupon]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_AddCoupon]
+	@PortalID int,
+	@Code nvarchar(10),
+	@Description nvarchar(255),
+	@RuleType int,
+	@RuleAmount money,
+	@DiscountType int,
+	@DiscountPercentage int,
+	@DiscountAmount money,
+	@ApplyTo int,
+	@ItemID int,
+	@StartDate datetime,
+	@EndDate datetime,
+	@Validity int,
+	@UserID int
+	AS
+	SET NOCOUNT ON
+	INSERT INTO {databaseOwner}{objectQualifier}Store_Coupons
+		(PortalID,Code,[Description],RuleType,RuleAmount,DiscountType,DiscountPercentage,DiscountAmount,ApplyTo,ItemID,StartDate,EndDate,Validity,CreatedByUserID,CreatedDate)
+		VALUES
+		(@PortalID,@Code,@Description,@RuleType,@RuleAmount,@DiscountType,@DiscountPercentage,@DiscountAmount,@ApplyTo,@ItemID,@StartDate,@EndDate,@Validity,@UserID,GETDATE())
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_DeleteCoupon]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_DeleteCoupon]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_DeleteCoupon]
+		@CouponID int
+	AS
+	SET NOCOUNT ON
+	DELETE FROM {databaseOwner}{objectQualifier}Store_Coupons
+	WHERE CouponID=@CouponID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_GetAll]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetAll]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetAll]
+	@PortalID int
+	AS
+	SET NOCOUNT ON
+	SELECT CouponID,PortalID,Code,[Description],RuleType,RuleAmount,DiscountType,DiscountPercentage,DiscountAmount,ApplyTo,ItemID,StartDate,EndDate,Validity,CreatedByUserID,CreatedDate
+	FROM {databaseOwner}{objectQualifier}Store_Coupons
+	WHERE PortalID = @PortalID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_GetCoupon]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetCoupon]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetCoupon]
+	@PortalID int,
+	@CouponID int
+	AS
+	SET NOCOUNT ON
+	SELECT CouponID,PortalID,Code,[Description],RuleType,RuleAmount,DiscountType,DiscountPercentage,DiscountAmount,ApplyTo,ItemID,StartDate,EndDate,Validity,CreatedByUserID,CreatedDate
+	FROM {databaseOwner}{objectQualifier}Store_Coupons
+	WHERE PortalID = @PortalID AND CouponID = @CouponID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_GetCouponByCode]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetCouponByCode]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetCouponByCode]
+	@PortalID int,
+	@CouponCode nvarchar(10)
+	AS
+	SET NOCOUNT ON
+	SELECT CouponID,PortalID,Code,[Description],RuleType,RuleAmount,DiscountType,DiscountPercentage,DiscountAmount,ApplyTo,ItemID,StartDate,EndDate,Validity,CreatedByUserID,CreatedDate
+	FROM {databaseOwner}{objectQualifier}Store_Coupons
+	WHERE PortalID = @PortalID AND Code = @CouponCode
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_UpdateCoupon]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_UpdateCoupon]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_UpdateCoupon]
+	@CouponID int,
+	@PortalID int,
+	@Code nvarchar(10),
+	@Description nvarchar(255),
+	@RuleType int,
+	@RuleAmount money,
+	@DiscountType int,
+	@DiscountPercentage int,
+	@DiscountAmount money,
+	@ApplyTo int,
+	@ItemID int,
+	@StartDate datetime,
+	@EndDate datetime,
+	@Validity int,
+	@UserID int
+	AS
+	SET NOCOUNT ON
+	UPDATE {databaseOwner}{objectQualifier}Store_Coupons SET 
+		PortalID=@PortalID,
+		Code=@Code,
+		[Description]=@Description,
+		RuleType=@RuleType,
+		RuleAmount=@RuleAmount,
+		DiscountType=@DiscountType,
+		DiscountPercentage=@DiscountPercentage,
+		DiscountAmount=@DiscountAmount,
+		ApplyTo=@ApplyTo,
+		ItemID=@ItemID,
+		StartDate=@StartDate,
+		EndDate=@EndDate,
+		Validity=@Validity,
+		CreatedByUserID=@UserID,
+		CreatedDate=GETDATE()
+	WHERE
+		CouponID=@CouponID
+GO

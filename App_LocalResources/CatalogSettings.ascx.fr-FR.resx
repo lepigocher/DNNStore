@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblCatTemplate.Text" xml:space="preserve">
+    <value>Gabarit du catalogue :</value>
+  </data>
+  <data name="lblDefaultCategory.Text" xml:space="preserve">
+    <value>Catégorie par défaut :</value>
+  </data>
+  <data name="lblUseDefaultCategory.Text" xml:space="preserve">
+    <value>Utiliser une catégorie par défaut ?</value>
+  </data>
+  <data name="lblShowCategoryMsg.Text" xml:space="preserve">
+    <value>Afficher le détail de la catégorie :</value>
+  </data>
+  <data name="lblShowFeaturedProducts.Text" xml:space="preserve">
+    <value>Afficher les produits en promotion :</value>
+  </data>
+  <data name="lblShowPopularProducts.Text" xml:space="preserve">
+    <value>Afficher les produits populaires :</value>
+  </data>
+  <data name="lblShowCategoryProducts.Text" xml:space="preserve">
+    <value>Afficher les produits par catégorie :</value>
+  </data>
+  <data name="lblShowProductDetail.Text" xml:space="preserve">
+    <value>Afficher le détail du produit :</value>
+  </data>
+  <data name="lblFPSListTemplate.Text" xml:space="preserve">
+    <value>Gabarit de la liste :</value>
+  </data>
+  <data name="lblFPSRows.Text" xml:space="preserve">
+    <value>Lignes :</value>
+  </data>
+  <data name="lblPDSThumbnailWidth.Text" xml:space="preserve">
+    <value>Largeur de vignette :</value>
+  </data>
+  <data name="lblPDSShowThumbnail.Text" xml:space="preserve">
+    <value>Afficher les vignettes :</value>
+  </data>
+  <data name="lblDetailTemplate.Text" xml:space="preserve">
+    <value>Gabarit du détail :</value>
+  </data>
+  <data name="lblPPSDetailPage.Text" xml:space="preserve">
+    <value>Page de détail :</value>
+  </data>
+  <data name="lblCSThumbnailWidth.Text" xml:space="preserve">
+    <value>Largeur de vignette :</value>
+  </data>
+  <data name="lblCSShowThumbnail.Text" xml:space="preserve">
+    <value>Afficher les vignettes :</value>
+  </data>
+  <data name="lblFPSColumnWidth.Text" xml:space="preserve">
+    <value>Largeur de colonne :</value>
+  </data>
+  <data name="lblFPSColumns.Text" xml:space="preserve">
+    <value>Colonnes :</value>
+  </data>
+  <data name="lblCSRows.Text" xml:space="preserve">
+    <value>Lignes :</value>
+  </data>
+  <data name="lblCSListTemplate.Text" xml:space="preserve">
+    <value>Gabarit de la liste :</value>
+  </data>
+  <data name="lblCSColumnWidth.Text" xml:space="preserve">
+    <value>Largeur de colonne :</value>
+  </data>
+  <data name="lblCSDetailPage.Text" xml:space="preserve">
+    <value>Page de détail :</value>
+  </data>
+  <data name="lblFPSShowThumbnail.Text" xml:space="preserve">
+    <value>Afficher les vignettes :</value>
+  </data>
+  <data name="lblFPSThumbnailWidth.Text" xml:space="preserve">
+    <value>Largeur de vignette :</value>
+  </data>
+  <data name="lblFPSDetailPage.Text" xml:space="preserve">
+    <value>Page de détail :</value>
+  </data>
+  <data name="lblPPSListTemplate.Text" xml:space="preserve">
+    <value>Gabarit de la liste :</value>
+  </data>
+  <data name="lblPPSRows.Text" xml:space="preserve">
+    <value>Lignes :</value>
+  </data>
+  <data name="lblPPSColumns.Text" xml:space="preserve">
+    <value>Colonnes :</value>
+  </data>
+  <data name="lblPPSColumnWidth.Text" xml:space="preserve">
+    <value>Largeur de colonne :</value>
+  </data>
+  <data name="lblPPSShowThumbnail.Text" xml:space="preserve">
+    <value>Afficher les vignettes :</value>
+  </data>
+  <data name="lblPPSThumbnailWidth.Text" xml:space="preserve">
+    <value>Largeur de vignette :</value>
+  </data>
+  <data name="lblCSColumns.Text" xml:space="preserve">
+    <value>Colonnes :</value>
+  </data>
+  <data name="SelectDefaultCategory.Text" xml:space="preserve">
+    <value>(aucune)</value>
+  </data>
+  <data name="FPLSamePage.Text" xml:space="preserve">
+    <value>Même page</value>
+  </data>
+  <data name="PPLSamePage.Text" xml:space="preserve">
+    <value>Même page</value>
+  </data>
+  <data name="CPLSamePage.Text" xml:space="preserve">
+    <value>Même page</value>
+  </data>
+  <data name="dshGenSettings.Text" xml:space="preserve">
+    <value>Paramètres généraux</value>
+  </data>
+  <data name="dshFeaturedProductList.Text" xml:space="preserve">
+    <value>Paramètres des produits en promotion</value>
+  </data>
+  <data name="dshPopularProductList.Text" xml:space="preserve">
+    <value>Paramètres des produits populaires</value>
+  </data>
+  <data name="dshCategoryProductList.Text" xml:space="preserve">
+    <value>Paramètres des produits par catégorie</value>
+  </data>
+  <data name="dshProductDetails.Text" xml:space="preserve">
+    <value>Paramètres du détail des produits</value>
+  </data>
+  <data name="ControlTitle_settings.Text" xml:space="preserve">
+    <value>Paramètres du catalogue</value>
+  </data>
+  <data name="dshNewProductList.Text" xml:space="preserve">
+    <value>Paramètres des nouveaux produits</value>
+  </data>
+  <data name="lblNPSColumns.Text" xml:space="preserve">
+    <value>Colonnes :</value>
+  </data>
+  <data name="lblNPSColumnWidth.Text" xml:space="preserve">
+    <value>Largeur de colonne :</value>
+  </data>
+  <data name="lblNPSListTemplate.Text" xml:space="preserve">
+    <value>Gabarit de la liste :</value>
+  </data>
+  <data name="lblNPSRows.Text" xml:space="preserve">
+    <value>Lignes :</value>
+  </data>
+  <data name="lblShowNewProducts.Text" xml:space="preserve">
+    <value>Afficher les nouveaux produits :</value>
+  </data>
+  <data name="lblNPSDetailPage.Text" xml:space="preserve">
+    <value>Page de détail :</value>
+  </data>
+  <data name="lblNPSShowThumbnail.Text" xml:space="preserve">
+    <value>Afficher les vignettes :</value>
+  </data>
+  <data name="lblNPSThumbnailWidth.Text" xml:space="preserve">
+    <value>Largeur de vignette :</value>
+  </data>
+  <data name="NPLSamePage.Text" xml:space="preserve">
+    <value>Même page</value>
+  </data>
+  <data name="lblPDSReturnPage.Text" xml:space="preserve">
+    <value>Page de retour :</value>
+  </data>
+  <data name="PDSSamePage.Text" xml:space="preserve">
+    <value>Même page</value>
+  </data>
+  <data name="lblCSShowPageInfo.Text" xml:space="preserve">
+    <value>Numérotation des pages :</value>
+  </data>
+  <data name="lblCSShowPageNav.Text" xml:space="preserve">
+    <value>Contrôle de navigation :</value>
+  </data>
+  <data name="lblCSContainerTemplate.Text" xml:space="preserve">
+    <value>Gabarit du container :</value>
+  </data>
+  <data name="lblFPSContainerTemplate.Text" xml:space="preserve">
+    <value>Gabarit du container :</value>
+  </data>
+  <data name="lblNPSContainerTemplate.Text" xml:space="preserve">
+    <value>Gabarit du container :</value>
+  </data>
+  <data name="lblPPSContainerTemplate.Text" xml:space="preserve">
+    <value>Gabarit du container :</value>
+  </data>
+  <data name="lblPDSShowReviews.Text" xml:space="preserve">
+    <value>Afficher les avis :</value>
+  </data>
+  <data name="lblCSRepeatDirection.Text" xml:space="preserve">
+    <value>Sens de remplissage :</value>
+  </data>
+  <data name="lblFPSRepeatDirection.Text" xml:space="preserve">
+    <value>Sens de remplissage :</value>
+  </data>
+  <data name="lblNPSRepeatDirection.Text" xml:space="preserve">
+    <value>Sens de remplissage :</value>
+  </data>
+  <data name="lblPPSRepeatDirection.Text" xml:space="preserve">
+    <value>Sens de remplissage :</value>
+  </data>
+  <data name="RepeatDirectionHoriz.Text" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="RepeatDirectionVert.Text" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="chkSortCreatedDate.Text" xml:space="preserve">
+    <value>Date de création</value>
+  </data>
+  <data name="chkSortManufacturer.Text" xml:space="preserve">
+    <value>Fabriquant</value>
+  </data>
+  <data name="chkSortModelName.Text" xml:space="preserve">
+    <value>Nom du produit</value>
+  </data>
+  <data name="chkSortModelNumber.Text" xml:space="preserve">
+    <value>Code produit</value>
+  </data>
+  <data name="chkSortUnitPrice.Text" xml:space="preserve">
+    <value>Prix unitaire</value>
+  </data>
+  <data name="SortAscending.Text" xml:space="preserve">
+    <value>Ascendant</value>
+  </data>
+  <data name="SortDescending.Text" xml:space="preserve">
+    <value>Descendant</value>
+  </data>
+  <data name="lblCSSortBy.Text" xml:space="preserve">
+    <value>Trier par :</value>
+  </data>
+  <data name="lblCSSortDir.Text" xml:space="preserve">
+    <value>Direction :</value>
+  </data>
+  <data name="lblCSSubCategories.Text" xml:space="preserve">
+    <value>Sous-Catégories :</value>
+  </data>
+  <data name="lblCatTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour le catalogue.  Le gabarit par défaut est Catalog.htm.</value>
+  </data>
+  <data name="lblCSColumns.Help" xml:space="preserve">
+    <value>Saisir le nombre de colonnes d'affichage des produits.</value>
+  </data>
+  <data name="lblCSColumnWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage des colonnes de produits. Si la valeur est supérieure à 0, elle sera insérée dans l'attribut de style de la cellule correspondante. Pour un meilleur contrôle de l'affichage, vous devriez définir cette valeur à 0 et utiliser les classes css : td.StoreCategoryProductItem et td.StoreCategoryProductAlternatingItem définies dans le fichier StoreFront.css.</value>
+  </data>
+  <data name="lblCSContainerTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour le container des produits par catégorie. Le gabarit par défaut est CategoryContainer.htm.</value>
+  </data>
+  <data name="lblCSDetailPage.Help" xml:space="preserve">
+    <value>Sélectionner la page sur laquelle se trouve le module Store Catalog pour afficher les détails du produit. Généralement, il s'agit de la même page, sauf si vous utilisez plusieurs modules Store Catalog.</value>
+  </data>
+  <data name="lblCSListTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour la liste des produits. Les gabarits par défaut sont ProductList.htm et ProductListFullInfo.htm.</value>
+  </data>
+  <data name="lblCSRepeatDirection.Help" xml:space="preserve">
+    <value>Sélectionner le sens de remplissage de la liste des produits.</value>
+  </data>
+  <data name="lblCSRows.Help" xml:space="preserve">
+    <value>Saisir le nombre de lignes d'affichage des produits.</value>
+  </data>
+  <data name="lblCSShowThumbnail.Help" xml:space="preserve">
+    <value>Cocher pour afficher les vignettes des produits.</value>
+  </data>
+  <data name="lblCSSortBy.Help" xml:space="preserve">
+    <value>Sélectionner la colonne produit sur laquelle la liste doit être triée.</value>
+  </data>
+  <data name="lblCSSortDir.Help" xml:space="preserve">
+    <value>Sélectionner l'ordre de tri.</value>
+  </data>
+  <data name="lblCSSubCategories.Help" xml:space="preserve">
+    <value>Cocher pour inclure dans la liste les produits les sous catégories de la catégorie sélectionnée.</value>
+  </data>
+  <data name="lblCSThumbnailWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage en pixel des vignettes des produits.</value>
+  </data>
+  <data name="lblDefaultCategory.Help" xml:space="preserve">
+    <value>Sélectionner la catégorie par défaut à afficher.</value>
+  </data>
+  <data name="lblDetailTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour la section de détail. Les gabarits par défaut sont ProductDetail.htm et ProductDetailFullInfo.htm.</value>
+  </data>
+  <data name="lblFPSColumns.Help" xml:space="preserve">
+    <value>Saisir le nombre de colonnes d'affichage des produits.</value>
+  </data>
+  <data name="lblFPSColumnWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage des colonnes de produits. Si la valeur est supérieure à 0, elle sera insérée dans l'attribut de style de la cellule correspondante. Pour un meilleur contrôle de l'affichage, vous devriez définir cette valeur à 0 et utiliser les classes css : td.StoreFeaturedProductItem et td.StoreFeaturedProductAlternatingItem définies dans le fichier StoreFront.css.</value>
+  </data>
+  <data name="lblFPSContainerTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour le container des meilleurs produits. Le gabarit par défaut est ListContainer.htm.</value>
+  </data>
+  <data name="lblFPSDetailPage.Help" xml:space="preserve">
+    <value>Sélectionner la page sur laquelle se trouve le module Store Catalog pour afficher les détails du produit. Généralement, il s'agit de la même page, sauf si vous utilisez plusieurs modules Store Catalog.</value>
+  </data>
+  <data name="lblFPSListTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour la liste des produits. Les gabarits par défaut sont FeaturedProduct.htm et FeaturedProduct_Small.htm.</value>
+  </data>
+  <data name="lblFPSRepeatDirection.Help" xml:space="preserve">
+    <value>Sélectionner le sens de remplissage de la liste des produits.</value>
+  </data>
+  <data name="lblFPSRows.Help" xml:space="preserve">
+    <value>Saisir le nombre de lignes d'affichage des produits.</value>
+  </data>
+  <data name="lblFPSShowThumbnail.Help" xml:space="preserve">
+    <value>Cocher pour afficher les vignettes des produits.</value>
+  </data>
+  <data name="lblFPSThumbnailWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage en pixel des vignettes des produits.</value>
+  </data>
+  <data name="lblNPSColumns.Help" xml:space="preserve">
+    <value>Saisir le nombre de colonnes d'affichage des produits.</value>
+  </data>
+  <data name="lblNPSColumnWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage des colonnes de produits. Si la valeur est supérieure à 0, elle sera insérée dans l'attribut de style de la cellule correspondante. Pour un meilleur contrôle de l'affichage, vous devriez définir cette valeur à 0 et utiliser les classes css : td.StoreNewProductItem et td.StoreNewProductAlternatingItem définies dans le fichier StoreFront.css.</value>
+  </data>
+  <data name="lblNPSContainerTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour le container des nouveaux produits. Le gabarit par défaut est ListContainer.htm.</value>
+  </data>
+  <data name="lblNPSDetailPage.Help" xml:space="preserve">
+    <value>Sélectionner la page sur laquelle se trouve le module Store Catalog pour afficher les détails du produit. Généralement, il s'agit de la même page, sauf si vous utilisez plusieurs modules Store Catalog.</value>
+  </data>
+  <data name="lblNPSListTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour la liste des produits. Les gabarits par défaut sont NewProduct.htm et NewProduct_Small.htm.</value>
+  </data>
+  <data name="lblNPSRepeatDirection.Help" xml:space="preserve">
+    <value>Sélectionner le sens de remplissage de la liste des produits.</value>
+  </data>
+  <data name="lblNPSRows.Help" xml:space="preserve">
+    <value>Saisir le nombre de lignes d'affichage des produits.</value>
+  </data>
+  <data name="lblNPSShowThumbnail.Help" xml:space="preserve">
+    <value>Cocher pour afficher les vignettes des produits.</value>
+  </data>
+  <data name="lblNPSThumbnailWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage en pixel des vignettes des produits.</value>
+  </data>
+  <data name="lblPDSReturnPage.Help" xml:space="preserve">
+    <value>Sélectionner la page de retour vers le catalogue. Généralement, il s'agit de la même page, sauf si vous utilisez plusieurs modules Store Catalog.</value>
+  </data>
+  <data name="lblPDSShowReviews.Help" xml:space="preserve">
+    <value>Cocher pour afficher les avis.</value>
+  </data>
+  <data name="lblPDSShowThumbnail.Help" xml:space="preserve">
+    <value>Cocher pour afficher les vignettes des produits.</value>
+  </data>
+  <data name="lblPDSThumbnailWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur de vignette en pixels.</value>
+  </data>
+  <data name="lblPPSColumns.Help" xml:space="preserve">
+    <value>Saisir le nombre de colonnes d'affichage des produits.</value>
+  </data>
+  <data name="lblPPSColumnWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage des colonnes de produits. Si la valeur est supérieure à 0, elle sera insérée dans l'attribut de style de la cellule correspondante. Pour un meilleur contrôle de l'affichage, vous devriez définir cette valeur à 0 et utiliser les classes css : td.StorePopularProductItem et td.StorePopularProductAlternatingItem définies dans le fichier StoreFront.css.</value>
+  </data>
+  <data name="lblPPSContainerTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour le container des produits populaires. Le gabarit par défaut est ListContainer.htm.</value>
+  </data>
+  <data name="lblPPSDetailPage.Help" xml:space="preserve">
+    <value>Sélectionner la page sur laquelle se trouve le module Store Catalog pour afficher les détails du produit. Généralement, il s'agit de la même page, sauf si vous utilisez plusieurs modules Store Catalog.</value>
+  </data>
+  <data name="lblPPSListTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour la liste des produits. Les gabarits par défaut sont PopularProduct.htm et PopularProduct_Small.htm.</value>
+  </data>
+  <data name="lblPPSRepeatDirection.Help" xml:space="preserve">
+    <value>Sélectionner le sens de remplissage de la liste des produits.</value>
+  </data>
+  <data name="lblPPSRows.Help" xml:space="preserve">
+    <value>Saisir le nombre de lignes d'affichage des produits.</value>
+  </data>
+  <data name="lblPPSShowThumbnail.Help" xml:space="preserve">
+    <value>Cocher pour afficher les vignettes des produits.</value>
+  </data>
+  <data name="lblPPSThumbnailWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage en pixel des vignettes des produits.</value>
+  </data>
+  <data name="lblShowCategoryMsg.Help" xml:space="preserve">
+    <value>Cocher pour afficher le message de la catégorie.</value>
+  </data>
+  <data name="lblShowCategoryProducts.Help" xml:space="preserve">
+    <value>Cocher pour afficher la section des produits par catégorie.</value>
+  </data>
+  <data name="lblShowFeaturedProducts.Help" xml:space="preserve">
+    <value>Cocher pour afficher la section des produits en promotion.</value>
+  </data>
+  <data name="lblShowNewProducts.Help" xml:space="preserve">
+    <value>Cocher pour afficher la section des nouveaux produits.</value>
+  </data>
+  <data name="lblShowPopularProducts.Help" xml:space="preserve">
+    <value>Cocher pour afficher la section des produits populaires.</value>
+  </data>
+  <data name="lblShowProductDetail.Help" xml:space="preserve">
+    <value>Cocher pour afficher la section de détails des produits.</value>
+  </data>
+  <data name="lblUseDefaultCategory.Help" xml:space="preserve">
+    <value>Cocher pour définir une catégorie par défaut.</value>
+  </data>
+  <data name="lblEnableContentIndexing.Help" xml:space="preserve">
+    <value>Cocher pour autoriser l'indexation du contenu par le moteur de recherche de DotNetNuke. Si vous utilisez plusieurs modules Store Catalog dans votre portail, vous devriez cocher ce paramètre dans une SEULE instance du module Store Catalog. Sinon, vos produits seront indexés deux fois (ou plus) par le moteur de recherche.</value>
+  </data>
+  <data name="lblEnableContentIndexing.Text" xml:space="preserve">
+    <value>Indexer le contenu :</value>
+  </data>
+  <data name="lblCPSGIFBgColor.Help" xml:space="preserve">
+    <value>Saisir la valeur hexadécimale de la couleur de fond à utiliser avec les images aux format GIF. Valeurs correctes : #FFFFFF, #f00, FF0000,  F09, etc.</value>
+  </data>
+  <data name="lblCPSGIFBgColor.Text" xml:space="preserve">
+    <value>Couleur de fond GIF :</value>
+  </data>
+  <data name="lblFPSGIFBgColor.Help" xml:space="preserve">
+    <value>Saisir la valeur hexadécimale de la couleur de fond à utiliser avec les images aux format GIF. Valeurs correctes : #FFFFFF, #f00, FF0000,  F09, etc.</value>
+  </data>
+  <data name="lblFPSGIFBgColor.Text" xml:space="preserve">
+    <value>Couleur de fond GIF :</value>
+  </data>
+  <data name="lblNPSGIFBgColor.Help" xml:space="preserve">
+    <value>Saisir la valeur hexadécimale de la couleur de fond à utiliser avec les images aux format GIF. Valeurs correctes : #FFFFFF, #f00, FF0000,  F09, etc.</value>
+  </data>
+  <data name="lblNPSGIFBgColor.Text" xml:space="preserve">
+    <value>Couleur de fond GIF :</value>
+  </data>
+  <data name="lblPDSGIFBgColor.Help" xml:space="preserve">
+    <value>Saisir la valeur hexadécimale de la couleur de fond à utiliser avec les images aux format GIF. Valeurs correctes : #FFFFFF, #f00, FF0000,  F09, etc.</value>
+  </data>
+  <data name="lblPDSGIFBgColor.Text" xml:space="preserve">
+    <value>Couleur de fond GIF :</value>
+  </data>
+  <data name="lblPPSGIFBgColor.Help" xml:space="preserve">
+    <value>Saisir la valeur hexadécimale de la couleur de fond à utiliser avec les images aux format GIF. Valeurs correctes : #FFFFFF, #f00, FF0000,  F09, etc.</value>
+  </data>
+  <data name="lblPPSGIFBgColor.Text" xml:space="preserve">
+    <value>Couleur de fond GIF :</value>
+  </data>
+  <data name="lblSSListTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour la liste des produits recherchés. Le gabarit par défaut est SearchResultsList.htm.</value>
+  </data>
+  <data name="lblSSListTemplate.Text" xml:space="preserve">
+    <value>Gabarit de la recherche :</value>
+  </data>
+  <data name="chkSearchDescription.Text" xml:space="preserve">
+    <value>Description du produit</value>
+  </data>
+  <data name="chkSearchManufacturer.Text" xml:space="preserve">
+    <value>Fabriquant</value>
+  </data>
+  <data name="chkSearchModelName.Text" xml:space="preserve">
+    <value>Nom du produit</value>
+  </data>
+  <data name="chkSearchModelNumber.Text" xml:space="preserve">
+    <value>Code produit</value>
+  </data>
+  <data name="chkSearchSummary.Text" xml:space="preserve">
+    <value>Résumé du produit</value>
+  </data>
+  <data name="lblSSSearchColumn.Help" xml:space="preserve">
+    <value>Sélectionner la colonne de recherche par défaut.</value>
+  </data>
+  <data name="lblSSSearchColumn.Text" xml:space="preserve">
+    <value>Rechercher par :</value>
+  </data>
+  <data name="dshSearchProduct.Text" xml:space="preserve">
+    <value>Paramètres de la recherche</value>
+  </data>
+  <data name="lblCSSortColumns.Help" xml:space="preserve">
+    <value>Sélectionner les colonnes de tri permises.</value>
+  </data>
+  <data name="lblCSSortColumns.Text" xml:space="preserve">
+    <value>Colonnes de tri :</value>
+  </data>
+  <data name="lblCSSearchColumns.Help" xml:space="preserve">
+    <value>Sélectionner les colonnes de recherche permises.</value>
+  </data>
+  <data name="lblCSSearchColumns.Text" xml:space="preserve">
+    <value>Colonnes de recherche :</value>
+  </data>
+  <data name="lblCacheDuration.Help" xml:space="preserve">
+    <value>Saisir la durée du cache (en minutes) pour les images. Valeur par défaut : 2 minutes.</value>
+  </data>
+  <data name="lblCacheDuration.Text" xml:space="preserve">
+    <value>Durée du cache :</value>
+  </data>
+  <data name="lblEnableImageCaching.Help" xml:space="preserve">
+    <value>Cocher pour activer la mise en cache des images. Veuillez décocher lors de la mise forme de la boutique ou vous devrez attendre pendant la durée de mise en cache pour voir vos modifications (les paramètres concernés sont la taille de l'image et la couleur de fond des images GIF).</value>
+  </data>
+  <data name="lblEnableImageCaching.Text" xml:space="preserve">
+    <value>Images en cache :</value>
+  </data>
+  <data name="dshSortProduct.Text" xml:space="preserve">
+    <value>Paramètres de tri</value>
+  </data>
+  <data name="lblAllowPrint.Help" xml:space="preserve">
+    <value>La fonction d'impression par défault du module sera désactivée si ce paramètre est coché. Vous devez ajouter un bouton StorePrint.Action à votre container pour utiliser cette fonction. Veuillez consulter le guide de personnalisation (Templating Guide) pour plus d'informations.</value>
+  </data>
+  <data name="lblAllowPrint.Text" xml:space="preserve">
+    <value>Autoriser l'impression :</value>
+  </data>
+  <data name="dshAlsoBoughtProductList.Text" xml:space="preserve">
+    <value>Paramètres des produits achetés conjointement</value>
+  </data>
+  <data name="lblABPSColumns.Help" xml:space="preserve">
+    <value>Saisir le nombre de colonnes d'affichage des produits.</value>
+  </data>
+  <data name="lblABPSColumns.Text" xml:space="preserve">
+    <value>Colonnes :</value>
+  </data>
+  <data name="lblABPSColumnWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage des colonnes de produits. Si la valeur est supérieure à 0, elle sera insérée dans l'attribut de style de la cellule correspondante. Pour un meilleur contrôle de l'affichage, vous devriez définir cette valeur à 0 et utiliser les classes css : td.StoreAlsoBoughtProductItem et td.StoreAlsoBoughtProductAlternatingItem définies dans le fichier StoreFront.css.</value>
+  </data>
+  <data name="lblABPSColumnWidth.Text" xml:space="preserve">
+    <value>Largeur de colonne :</value>
+  </data>
+  <data name="lblABPSContainerTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour le container des produits achetés conjointement. Le gabarit par défaut est ListContainer.htm.</value>
+  </data>
+  <data name="lblABPSContainerTemplate.Text" xml:space="preserve">
+    <value>Gabarit du container :</value>
+  </data>
+  <data name="lblABPSDetailPage.Help" xml:space="preserve">
+    <value>Sélectionner la page sur laquelle se trouve le module Store Catalog pour afficher les détails du produit. Généralement, il s'agit de la même page, sauf si vous utilisez plusieurs modules Store Catalog.</value>
+  </data>
+  <data name="lblABPSDetailPage.Text" xml:space="preserve">
+    <value>Page de détail :</value>
+  </data>
+  <data name="lblABPSGIFBgColor.Help" xml:space="preserve">
+    <value>Saisir la valeur hexadécimale de la couleur de fond à utiliser avec les images aux format GIF. Valeurs correctes : #FFFFFF, #f00, FF0000,  F09, etc.</value>
+  </data>
+  <data name="lblABPSGIFBgColor.Text" xml:space="preserve">
+    <value>Couleur de fond GIF :</value>
+  </data>
+  <data name="lblABPSListTemplate.Help" xml:space="preserve">
+    <value>Sélectionner un gabarit pour la liste des produits. Les gabarits par défaut sont AlsoBoughtProduct.htm et AlsoBoughtProduct_Small.htm.</value>
+  </data>
+  <data name="lblABPSListTemplate.Text" xml:space="preserve">
+    <value>Gabarit de la liste :</value>
+  </data>
+  <data name="lblABPSRepeatDirection.Help" xml:space="preserve">
+    <value>Sélectionner le sens de remplissage de la liste des produits.</value>
+  </data>
+  <data name="lblABPSRepeatDirection.Text" xml:space="preserve">
+    <value>Sens de remplissage :</value>
+  </data>
+  <data name="lblABPSRows.Help" xml:space="preserve">
+    <value>Saisir le nombre de lignes d'affichage des produits.</value>
+  </data>
+  <data name="lblABPSRows.Text" xml:space="preserve">
+    <value>Lignes :</value>
+  </data>
+  <data name="lblABPSShowThumbnail.Help" xml:space="preserve">
+    <value>Cocher pour afficher les vignettes des produits.</value>
+  </data>
+  <data name="lblABPSShowThumbnail.Text" xml:space="preserve">
+    <value>Afficher les vignettes :</value>
+  </data>
+  <data name="lblABPSThumbnailWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur d'affichage en pixel des vignettes des produits.</value>
+  </data>
+  <data name="lblABPSThumbnailWidth.Text" xml:space="preserve">
+    <value>Largeur de vignette :</value>
+  </data>
+  <data name="lblShowAlsoBoughtProducts.Text" xml:space="preserve">
+    <value>Afficher les produits achetés conjointement :</value>
+  </data>
+  <data name="ABPLSamePage.Text" xml:space="preserve">
+    <value>Même page</value>
+  </data>
+  <data name="lblCSRepositioning.Help" xml:space="preserve">
+    <value>Si coché, lorsque le visiteur parcourt le catalogue le repositionnement est effectué en haut du module plutôt qu'en haut de la page.</value>
+  </data>
+  <data name="lblCSRepositioning.Text" xml:space="preserve">
+    <value>Repositionnement :</value>
+  </data>
+  <data name="lblShowAlsoBoughtProducts.Help" xml:space="preserve">
+    <value>Cocher pour afficher la section des produits conjoinement achetés.</value>
+  </data>
+  <data name="lblPDSCartWarning.Help" xml:space="preserve">
+    <value>Cocher pour afficher un message d'avertissement lorsque le produit sélectionné est déjà présent dans le panier.</value>
+  </data>
+  <data name="lblPDSCartWarning.Text" xml:space="preserve">
+    <value>Avertissement panier :</value>
+  </data>
+  <data name="lblNPSDisplayByCategory.Help" xml:space="preserve">
+    <value>Cocher pour afficher les nouveaux produits appartenant uniquement à la catégorie sélectionnée. Décocher la case pour afficher les nouveaux produits de tout le catalogue.</value>
+  </data>
+  <data name="lblNPSDisplayByCategory.Text" xml:space="preserve">
+    <value>Afficher par catégorie :</value>
+  </data>
+  <data name="lblDisplayAllProducts.Help" xml:space="preserve">
+    <value>Cocher pour afficher tous les produits quand aucune catégorie n'est sélectionnée.</value>
+  </data>
+  <data name="lblDisplayAllProducts.Text" xml:space="preserve">
+    <value>Afficher tous les produits :</value>
+  </data>
+  <data name="lblFPSDisplayByCategory.Help" xml:space="preserve">
+    <value>Cocher pour afficher les produits en promotion appartenant uniquement à la catégorie sélectionnée. Décocher la case pour afficher les produits en promotion de tout le catalogue.</value>
+  </data>
+  <data name="lblFPSDisplayByCategory.Text" xml:space="preserve">
+    <value>Afficher par catégorie :</value>
+  </data>
+</root>

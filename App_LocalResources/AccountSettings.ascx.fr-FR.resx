@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblRequireSSL.Text" xml:space="preserve">
+    <value>Forcer SSL lors du contrôle</value>
+  </data>
+  <data name="lblRequireSSL.Help" xml:space="preserve">
+    <value>Force l'utilisation du protocole de sécurité SSL pendant le contrôle de la commande.</value>
+  </data>
+  <data name="lblSSLNote.Text" xml:space="preserve">
+    <value>NOTE :</value>
+  </data>
+  <data name="SSLMessage.Text" xml:space="preserve">
+    <value>Ce paramètre force l'utilisation du protocole HTTPS pendant le contrôle de la commande. HTTPS doit être correctement installé sur le serveur; sinon la page de contrôle ne se chargera pas.</value>
+  </data>
+  <data name="lblSSLNote.Help" xml:space="preserve">
+    <value>Information importante à propos des paramètres SSL.</value>
+  </data>
+  <data name="ControlTitle_settings.Text" xml:space="preserve">
+    <value>Paramètres du compte</value>
+  </data>
+  <data name="dshMainCartSettings.Text" xml:space="preserve">
+    <value>Paramètres du panier</value>
+  </data>
+  <data name="lblIncludeVAT.Help" xml:space="preserve">
+    <value>Cocher pour afficher le prix du produit TVA incluse.</value>
+  </data>
+  <data name="lblIncludeVAT.Text" xml:space="preserve">
+    <value>Inclure la TVA :</value>
+  </data>
+  <data name="lblProductColumn.Help" xml:space="preserve">
+    <value>Sélectionner l'attribut du produit devant être affiché dans la colonne produit.</value>
+  </data>
+  <data name="lblProductColumn.Text" xml:space="preserve">
+    <value>Colonne produit :</value>
+  </data>
+  <data name="lblShowThumbnail.Help" xml:space="preserve">
+    <value>Cocher pour afficher les vignettes de produit.</value>
+  </data>
+  <data name="lblShowThumbnail.Text" xml:space="preserve">
+    <value>Afficher les vignettes :</value>
+  </data>
+  <data name="lblThumbnailWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur de vignette en pixels. Défaut : 100.</value>
+  </data>
+  <data name="lblThumbnailWidth.Text" xml:space="preserve">
+    <value>Largeur de vignette :</value>
+  </data>
+  <data name="ModelName.Text" xml:space="preserve">
+    <value>Nom du produit</value>
+  </data>
+  <data name="ModelNumber.Text" xml:space="preserve">
+    <value>Code produit</value>
+  </data>
+  <data name="ProductTitle.Text" xml:space="preserve">
+    <value>Titre du produit</value>
+  </data>
+  <data name="lblGIFBgColor.Help" xml:space="preserve">
+    <value>Saisir la valeur hexadécimale de la couleur de fond à utiliser avec les images aux format GIF. Valeurs correctes : #FFFFFF, #f00, FF0000,  F09, etc.</value>
+  </data>
+  <data name="lblGIFBgColor.Text" xml:space="preserve">
+    <value>Couleur de fond GIF :</value>
+  </data>
+  <data name="lblDefaultView.Help" xml:space="preserve">
+    <value>Sélectionner la vue à afficher par défaut.</value>
+  </data>
+  <data name="lblDefaultView.Text" xml:space="preserve">
+    <value>Affichage par défaut :</value>
+  </data>
+  <data name="CustomerCart.Text" xml:space="preserve">
+    <value>Panier du client</value>
+  </data>
+  <data name="CustomerOrders.Text" xml:space="preserve">
+    <value>Commandes du client</value>
+  </data>
+  <data name="CustomerProfile.Text" xml:space="preserve">
+    <value>Adresses du client</value>
+  </data>
+  <data name="lblLinkToDetail.Help" xml:space="preserve">
+    <value>Cocher pour inclure la colonne du produit dans un lien vers la page de détails du produit.</value>
+  </data>
+  <data name="lblLinkToDetail.Text" xml:space="preserve">
+    <value>Lien vers détail :</value>
+  </data>
+  <data name="valCompCacheDuration.Text" xml:space="preserve">
+    <value>&lt;br/&gt;* Une valeur numérique est requise !</value>
+  </data>
+  <data name="valRegExGIFBgColor.Text" xml:space="preserve">
+    <value>&lt;br/&gt;* Un code couleur HTML valide est requis !</value>
+  </data>
+  <data name="valReqCacheDuration.Text" xml:space="preserve">
+    <value>&lt;br/&gt;* La durée du cache est requise !</value>
+  </data>
+  <data name="valReqGIFBgColor.Text" xml:space="preserve">
+    <value>&lt;br/&gt;* La couleur de fond pour les images GIF est requise !</value>
+  </data>
+  <data name="valCompThumbnailWidth.Text" xml:space="preserve">
+    <value>&lt;br/&gt;* Une valeur numérique est requise !</value>
+  </data>
+  <data name="valReqThumbnailWidth.Text" xml:space="preserve">
+    <value>&lt;br/&gt;* La largeur de vignette est requise !</value>
+  </data>
+  <data name="lblCacheDuration.Help" xml:space="preserve">
+    <value>Saisir la durée du cache (en minutes) pour les images. Valeur par défaut : 2 minutes.</value>
+  </data>
+  <data name="lblCacheDuration.Text" xml:space="preserve">
+    <value>Durée du cache :</value>
+  </data>
+  <data name="lblEnableImageCaching.Help" xml:space="preserve">
+    <value>Cocher pour activer la mise en cache des images. Veuillez décocher lors de la mise forme de la boutique ou vous devrez attendre pendant la durée de mise en cache pour voir vos modifications (les paramètres concernés sont la taille de l'image et la couleur de fond des images GIF).</value>
+  </data>
+  <data name="lblEnableImageCaching.Text" xml:space="preserve">
+    <value>Images en cache :</value>
+  </data>
+</root>

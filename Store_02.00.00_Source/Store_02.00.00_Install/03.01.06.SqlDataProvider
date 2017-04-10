@@ -1,0 +1,94 @@
+IF NOT EXISTS (SELECT sc.[id] FROM {databaseOwner}[sysobjects] so INNER JOIN {databaseOwner}[syscolumns] sc ON so.[id]=sc.[id] WHERE so.[name]=N'{objectQualifier}Store_ShippingRates' AND sc.[name]=N'ApplyTaxRate')
+ALTER TABLE {databaseOwner}[{objectQualifier}Store_ShippingRates] ADD ApplyTaxRate bit NOT NULL CONSTRAINT DF_{objectQualifier}Store_ShippingRates_ApplyTaxRate DEFAULT (1);
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_ShippingRates_AddShippingRate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_ShippingRates_AddShippingRate]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_ShippingRates_AddShippingRate]
+	@PortalID int,
+	@Description nvarchar(255),
+	@MinWeight decimal(10,2),
+	@MaxWeight decimal(10,2),
+	@Cost money,
+	@ApplyTaxRate bit
+AS
+BEGIN
+	INSERT INTO {databaseOwner}{objectQualifier}Store_ShippingRates(PortalID, [Description], MinWeight, MaxWeight, Cost, ApplyTaxRate)
+	VALUES(@PortalID, @Description, @MinWeight, @MaxWeight, @Cost, @ApplyTaxRate)
+
+	RETURN SCOPE_IDENTITY()
+END
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_ShippingRates_GetShippingRate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_ShippingRates_GetShippingRate]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_ShippingRates_GetShippingRate]
+	@ID int
+AS
+BEGIN
+	SELECT ID, [Description], MinWeight, MaxWeight, Cost, ApplyTaxRate
+	FROM {databaseOwner}{objectQualifier}Store_ShippingRates
+	WHERE ID = @ID
+END
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_ShippingRates_GetShippingRates]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_ShippingRates_GetShippingRates]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_ShippingRates_GetShippingRates]
+	@PortalID int,
+	@Weight decimal(10,2)
+AS
+
+IF @Weight < 0
+BEGIN
+	SET @Weight = NULL
+END
+
+IF @Weight IS NOT NULL
+
+BEGIN
+	SELECT TOP 1 ID, [Description], MinWeight, MaxWeight, Cost, ApplyTaxRate
+	FROM {databaseOwner}{objectQualifier}Store_ShippingRates
+	WHERE PortalID = @PortalID
+		AND @Weight BETWEEN MinWeight AND MaxWeight
+	ORDER BY Cost ASC
+END
+
+ELSE
+
+BEGIN
+	SELECT ID, [Description], MinWeight, MaxWeight, Cost, ApplyTaxRate
+	FROM {databaseOwner}{objectQualifier}Store_ShippingRates
+	WHERE PortalID = @PortalID
+END
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_ShippingRates_UpdateShippingRate]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_ShippingRates_UpdateShippingRate]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_ShippingRates_UpdateShippingRate]
+	@ID int,
+	@Description nvarchar(255),
+	@MinWeight decimal(10,2),
+	@MaxWeight decimal(10,2),
+	@Cost money,
+	@ApplyTaxRate bit
+AS
+BEGIN
+	UPDATE {databaseOwner}{objectQualifier}Store_ShippingRates
+	SET
+		[Description] = @Description,
+		MinWeight = @MinWeight,
+		MaxWeight = @MaxWeight,
+		Cost = @Cost,
+		ApplyTaxRate = @ApplyTaxRate
+	WHERE ID = @ID
+END
+GO

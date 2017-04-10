@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDC12E34-B2DB-4191-8F87-8C19519CA7E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNetNuke.Modules.Store.Catalog</RootNamespace>
+    <AssemblyName>DotNetNuke.Modules.Store.Catalog</AssemblyName>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke, Version=4.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\DotNetNuke.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CatalogTokenReplace.cs" />
+    <Compile Include="CategoryController.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryInfo.cs" />
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="ImageCache.cs" />
+    <Compile Include="ListTemplate.cs" />
+    <Compile Include="ModuleSettings.cs" />
+    <Compile Include="ProductController.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductInfo.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReviewController.cs" />
+    <Compile Include="ReviewInfo.cs" />
+    <Compile Include="TemplateController.cs" />
+    <Compile Include="TemplateInfo.cs" />
+    <Compile Include="Token.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Admin\DotNetNuke.Store.Admin.csproj">
+      <Project>{C82B8EDC-1246-4F04-BDF7-FAC1468B9351}</Project>
+      <Name>DotNetNuke.Store.Admin</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Components\DotNetNuke.Store.Components.csproj">
+      <Project>{933F85DC-00FE-494A-8604-F8C5D62F85DD}</Project>
+      <Name>DotNetNuke.Store.Components</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\Catalog.htm" />
+    <Content Include="Templates\CategoryContainer.htm" />
+    <Content Include="Templates\FeaturedProduct.htm" />
+    <Content Include="Templates\FeaturedProduct_Small.htm" />
+    <Content Include="Templates\Images\addtocartimg_en-US.gif" />
+    <Content Include="Templates\Images\AddToCart_blue_2_en-US.jpg" />
+    <Content Include="Templates\Images\AddToCart_blue_en-US.jpg" />
+    <Content Include="Templates\Images\AddToCart_gray_en-US.jpg" />
+    <Content Include="Templates\Images\AddToCart_orange_en-US.jpg" />
+    <Content Include="Templates\Images\Basket.gif" />
+    <Content Include="Templates\Images\BuyNow_blue_en-US.jpg" />
+    <Content Include="Templates\Images\BuyNow_gray_en-US.jpg" />
+    <Content Include="Templates\Images\BuyNow_orange_en-US.jpg" />
+    <Content Include="Templates\Images\gel_background.gif" />
+    <Content Include="Templates\Images\gel_background_gray.gif" />
+    <Content Include="Templates\Images\gel_left.gif" />
+    <Content Include="Templates\Images\gel_right.gif" />
+    <Content Include="Templates\Images\linkdetailimg_en-US.gif" />
+    <Content Include="Templates\Images\purchaseimg_en-US.gif" />
+    <Content Include="Templates\Images\spacer.gif" />
+    <Content Include="Templates\ListContainer.htm" />
+    <Content Include="Templates\NewProduct.htm" />
+    <Content Include="Templates\NewProduct_Small.htm" />
+    <Content Include="Templates\PopularProduct.htm" />
+    <Content Include="Templates\PopularProduct_Small.htm" />
+    <Content Include="Templates\ProductDetail.htm" />
+    <Content Include="Templates\ProductDetailFullInfo.htm" />
+    <Content Include="Templates\ProductList.htm" />
+    <Content Include="Templates\ProductListFullInfo.htm" />
+    <Content Include="Templates\SearchResultsList.htm" />
+    <Content Include="Templates\StyleSheet\SkinObjects.css" />
+    <Content Include="Templates\StyleSheet\StoreAccount.css" />
+    <Content Include="Templates\StyleSheet\StoreFront.css" />
+    <Content Include="Templates\Template.css" />
+    <Content Include="Templates\TemplateDesign.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\Images\Buttons.psd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy $(ProjectDir)Templates\*.htm $(SolutionDir)Templates
+copy $(ProjectDir)Templates\*.css $(SolutionDir)Templates
+copy $(ProjectDir)Templates\StyleSheet\*.css $(SolutionDir)Templates\StyleSheet
+copy $(ProjectDir)Templates\Images\*.* $(SolutionDir)Templates\Images
+copy $(ProjectDir)Templates\*.htm $(SolutionDir)Store_02.00.00_Install
+copy $(ProjectDir)Templates\*.css $(SolutionDir)Store_02.00.00_Install
+copy $(ProjectDir)Templates\StyleSheet\*.css $(SolutionDir)Store_02.00.00_Install
+copy $(ProjectDir)Templates\Images\*.* $(SolutionDir)Store_02.00.00_Install
+copy $(TargetPath) $(SolutionDir)Store_02.00.00_Install
+if not exist $(SolutionDir)Store_02.00.00_Source\Catalog md $(SolutionDir)Store_02.00.00_Source\Catalog
+copy $(ProjectPath) $(SolutionDir)Store_02.00.00_Source\Catalog
+copy $(ProjectDir)*.cs $(SolutionDir)Store_02.00.00_Source\Catalog
+if not exist $(SolutionDir)Store_02.00.00_Source\Catalog\Properties md $(SolutionDir)Store_02.00.00_Source\Catalog\Properties
+copy $(ProjectDir)Properties\*.cs $(SolutionDir)Store_02.00.00_Source\Catalog\Properties
+if not exist $(SolutionDir)Store_02.00.00_Source\Catalog\Templates md $(SolutionDir)Store_02.00.00_Source\Catalog\Templates
+copy $(ProjectDir)Templates\*.* $(SolutionDir)Store_02.00.00_Source\Catalog\Templates
+if not exist $(SolutionDir)Store_02.00.00_Source\Catalog\Templates\Images md $(SolutionDir)Store_02.00.00_Source\Catalog\Templates\Images
+copy $(ProjectDir)Templates\Images\*.* $(SolutionDir)Store_02.00.00_Source\Catalog\Templates\Images
+if not exist $(SolutionDir)Store_02.00.00_Source\Catalog\Templates\StyleSheet md $(SolutionDir)Store_02.00.00_Source\Catalog\Templates\StyleSheet
+copy $(ProjectDir)Templates\StyleSheet\*.* $(SolutionDir)Store_02.00.00_Source\Catalog\Templates\StyleSheet</PostBuildEvent>
+  </PropertyGroup>
+</Project>

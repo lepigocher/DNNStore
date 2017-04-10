@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E7A1EB2-6E2C-4A3D-BC27-C665B3E30729}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNetNuke.Modules.Store.Providers.Tax.DefaultTaxProvider</RootNamespace>
+    <AssemblyName>DotNetNuke.Modules.Store.Providers.Tax.DefaultTaxProvider</AssemblyName>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke, Version=4.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\DotNetNuke.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="DefaultTaxAdmin.ascx.cs">
+      <DependentUpon>DefaultTaxAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultTaxAdmin.ascx.designer.cs">
+      <DependentUpon>DefaultTaxAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultTaxCheckout.ascx.cs">
+      <DependentUpon>DefaultTaxCheckout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultTaxCheckout.ascx.designer.cs">
+      <DependentUpon>DefaultTaxCheckout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaxController.cs" />
+    <Compile Include="TaxInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Admin\DotNetNuke.Store.Admin.csproj">
+      <Project>{C82B8EDC-1246-4F04-BDF7-FAC1468B9351}</Project>
+      <Name>DotNetNuke.Store.Admin</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Cart\DotNetNuke.Store.Cart.csproj">
+      <Project>{643E0708-2DF7-4727-8032-D4EC0B0EF72D}</Project>
+      <Name>DotNetNuke.Store.Cart</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Components\DotNetNuke.Store.Components.csproj">
+      <Project>{933F85DC-00FE-494A-8604-F8C5D62F85DD}</Project>
+      <Name>DotNetNuke.Store.Components</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Customer\DotNetNuke.Store.Customer.csproj">
+      <Project>{6BCB0DBD-6F52-4481-92C2-901CB78A21D6}</Project>
+      <Name>DotNetNuke.Store.Customer</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DotNetNuke.Store.Providers.csproj">
+      <Project>{1E004752-A1DD-46C2-9AB5-687C2B4555D7}</Project>
+      <Name>DotNetNuke.Store.Providers</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DefaultTaxAdmin.ascx" />
+    <Content Include="DefaultTaxCheckout.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="DefaultTaxProviderInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\DefaultTaxAdmin.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\DefaultTaxCheckout.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4913</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/DotNetNuke_2/DesktopModules/Store/Providers/TaxProviders/DefaultTaxProvider/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/DotNetNuke_2/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>copy $(ProjectDir)*.ascx $(SolutionDir)Store_02.00.00_Install
+copy $(ProjectDir)App_LocalResources\*.ascx.resx $(SolutionDir)Store_02.00.00_Install
+copy $(TargetPath) $(SolutionDir)Store_02.00.00_Install
+copy $(ProjectDir)DefaultTaxProviderInfo.xml $(SolutionDir)Store_02.00.00_Install
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider md $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider
+copy $(ProjectPath) $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider
+copy $(ProjectDir)*.cs $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider\Properties md $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider\Properties
+copy $(ProjectDir)Properties\*.cs $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider\Properties
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider\App_LocalResources md $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider\App_LocalResources
+copy $(ProjectDir)App_LocalResources\*.ascx.resx $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\DefaultTaxProvider\App_LocalResources
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

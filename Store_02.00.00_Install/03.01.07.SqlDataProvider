@@ -1,0 +1,116 @@
+IF NOT EXISTS (SELECT sc.[id] FROM {databaseOwner}[sysobjects] so INNER JOIN {databaseOwner}[syscolumns] sc ON so.[id]=sc.[id] WHERE so.[name]=N'{objectQualifier}Store_Coupons' AND sc.[name]=N'IncludeSubCategories')
+ALTER TABLE {databaseOwner}[{objectQualifier}Store_Coupons] ADD IncludeSubCategories bit NOT NULL CONSTRAINT DF_{objectQualifier}Store_Coupons_IncludeSubCategories DEFAULT (0);
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_AddCoupon]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_AddCoupon]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_AddCoupon]
+	@PortalID int,
+	@Code nvarchar(10),
+	@Description nvarchar(255),
+	@RuleType int,
+	@RuleAmount money,
+	@DiscountType int,
+	@DiscountPercentage int,
+	@DiscountAmount money,
+	@ApplyTo int,
+	@ItemID int,
+	@IncludeSubCategories bit,
+	@StartDate datetime,
+	@EndDate datetime,
+	@Validity int,
+	@UserID int
+	AS
+	SET NOCOUNT ON
+	INSERT INTO {databaseOwner}{objectQualifier}Store_Coupons
+		(PortalID,Code,[Description],RuleType,RuleAmount,DiscountType,DiscountPercentage,DiscountAmount,ApplyTo,ItemID,IncludeSubCategories,StartDate,EndDate,Validity,CreatedByUserID,CreatedDate)
+		VALUES
+		(@PortalID,@Code,@Description,@RuleType,@RuleAmount,@DiscountType,@DiscountPercentage,@DiscountAmount,@ApplyTo,@ItemID,@IncludeSubCategories,@StartDate,@EndDate,@Validity,@UserID,GETDATE())
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_GetAll]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetAll]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetAll]
+	@PortalID int
+	AS
+	SET NOCOUNT ON
+	SELECT CouponID,PortalID,Code,[Description],RuleType,RuleAmount,DiscountType,DiscountPercentage,DiscountAmount,ApplyTo,ItemID,IncludeSubCategories,StartDate,EndDate,Validity,CreatedByUserID,CreatedDate
+	FROM {databaseOwner}{objectQualifier}Store_Coupons
+	WHERE PortalID = @PortalID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_GetCoupon]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetCoupon]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetCoupon]
+	@PortalID int,
+	@CouponID int
+	AS
+	SET NOCOUNT ON
+	SELECT CouponID,PortalID,Code,[Description],RuleType,RuleAmount,DiscountType,DiscountPercentage,DiscountAmount,ApplyTo,ItemID,IncludeSubCategories,StartDate,EndDate,Validity,CreatedByUserID,CreatedDate
+	FROM {databaseOwner}{objectQualifier}Store_Coupons
+	WHERE PortalID = @PortalID AND CouponID = @CouponID
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_GetCouponByCode]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetCouponByCode]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_GetCouponByCode]
+	@PortalID int,
+	@CouponCode nvarchar(10)
+	AS
+	SET NOCOUNT ON
+	SELECT CouponID,PortalID,Code,[Description],RuleType,RuleAmount,DiscountType,DiscountPercentage,DiscountAmount,ApplyTo,ItemID,IncludeSubCategories,StartDate,EndDate,Validity,CreatedByUserID,CreatedDate
+	FROM {databaseOwner}{objectQualifier}Store_Coupons
+	WHERE PortalID = @PortalID AND Code = @CouponCode
+GO
+
+IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_UpdateCoupon]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_UpdateCoupon]
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}Store_Coupons_UpdateCoupon]
+	@CouponID int,
+	@PortalID int,
+	@Code nvarchar(10),
+	@Description nvarchar(255),
+	@RuleType int,
+	@RuleAmount money,
+	@DiscountType int,
+	@DiscountPercentage int,
+	@DiscountAmount money,
+	@ApplyTo int,
+	@ItemID int,
+	@IncludeSubCategories bit,
+	@StartDate datetime,
+	@EndDate datetime,
+	@Validity int,
+	@UserID int
+	AS
+	SET NOCOUNT ON
+	UPDATE {databaseOwner}{objectQualifier}Store_Coupons SET 
+		PortalID=@PortalID,
+		Code=@Code,
+		[Description]=@Description,
+		RuleType=@RuleType,
+		RuleAmount=@RuleAmount,
+		DiscountType=@DiscountType,
+		DiscountPercentage=@DiscountPercentage,
+		DiscountAmount=@DiscountAmount,
+		ApplyTo=@ApplyTo,
+		ItemID=@ItemID,
+		IncludeSubCategories=@IncludeSubCategories,
+		StartDate=@StartDate,
+		EndDate=@EndDate,
+		Validity=@Validity,
+		CreatedByUserID=@UserID,
+		CreatedDate=GETDATE()
+	WHERE
+		CouponID=@CouponID
+GO

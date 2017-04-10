@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblManufacturer.Text" xml:space="preserve">
+    <value>Fabriquant :</value>
+  </data>
+  <data name="lblManufacturer.Help" xml:space="preserve">
+    <value>Nom du fabriquant du produit.</value>
+  </data>
+  <data name="lblModelName.Text" xml:space="preserve">
+    <value>Nom du produit :</value>
+  </data>
+  <data name="lblModelName.Help" xml:space="preserve">
+    <value>Nom détaillé du produit</value>
+  </data>
+  <data name="lblModelNumber.Text" xml:space="preserve">
+    <value>Code :</value>
+  </data>
+  <data name="lblModelNumber.Help" xml:space="preserve">
+    <value>Code du produit.</value>
+  </data>
+  <data name="lblSummary.Text" xml:space="preserve">
+    <value>Résumé :</value>
+  </data>
+  <data name="lblSummary.Help" xml:space="preserve">
+    <value>Bref résumé décrivant le produit.&lt;br/&gt;Si le paramètre Dispositif SEO est activé&lt;br/&gt;dans les paramètres de la boutique,&lt;br/&gt;le META Description sera remplacé&lt;br/&gt;par cette valeur lors de l'affichage&lt;br/&gt;de la page de détails du produit.</value>
+  </data>
+  <data name="lblUnitPrice.Text" xml:space="preserve">
+    <value>Prix unitaire :</value>
+  </data>
+  <data name="lblUnitPrice.Help" xml:space="preserve">
+    <value>Prix du produit à l'unité.</value>
+  </data>
+  <data name="lblImage.Text" xml:space="preserve">
+    <value>Image :</value>
+  </data>
+  <data name="lblImage.Help" xml:space="preserve">
+    <value>Image du produit.</value>
+  </data>
+  <data name="lblCategory.Text" xml:space="preserve">
+    <value>Catégorie :</value>
+  </data>
+  <data name="lblCategory.Help" xml:space="preserve">
+    <value>Catégorie du produit.</value>
+  </data>
+  <data name="lblArchived.Text" xml:space="preserve">
+    <value>Archivé :</value>
+  </data>
+  <data name="lblArchived.Help" xml:space="preserve">
+    <value>Cocher si le produit est archivé.&lt;br/&gt;Il ne sera donc plus disponible à la vente.</value>
+  </data>
+  <data name="lblFeatured.Text" xml:space="preserve">
+    <value>En promotion :</value>
+  </data>
+  <data name="lblFeatured.Help" xml:space="preserve">
+    <value>Cocher si ce produit doit être affiché&lt;br/&gt;dans la liste des produits en promotion.</value>
+  </data>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>Description :</value>
+  </data>
+  <data name="lblDescription.Help" xml:space="preserve">
+    <value>Description détaillée du produit.</value>
+  </data>
+  <data name="valUnitPrice.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir un prix valide.</value>
+  </data>
+  <data name="lblUnitWeight.Help" xml:space="preserve">
+    <value>Saisir le poids du produit par unité.&lt;br/&gt; Si vous utilisez un tarif forfaitaire de livraison,&lt;br/&gt; vous pouvez laisser ce champ vide.</value>
+  </data>
+  <data name="lblUnitWeight.Text" xml:space="preserve">
+    <value>Poids :</value>
+  </data>
+  <data name="lblSaleEndDate.Help" xml:space="preserve">
+    <value>Saisir la date de fin de la période de promotion du produit.</value>
+  </data>
+  <data name="lblSaleEndDate.Text" xml:space="preserve">
+    <value>Date de fin de la promotion :</value>
+  </data>
+  <data name="lblSalePrice.Help" xml:space="preserve">
+    <value>Indiquer le prix du produit lors de la période de promotion.</value>
+  </data>
+  <data name="lblSalePrice.Text" xml:space="preserve">
+    <value>Prix du produit en promotion :</value>
+  </data>
+  <data name="lblSaleStartDate.Help" xml:space="preserve">
+    <value>Saisir la date de début de la période de promotion du produit.</value>
+  </data>
+  <data name="lblSaleStartDate.Text" xml:space="preserve">
+    <value>Date de début de la promotion :</value>
+  </data>
+  <data name="dshSpecialOffer.Text" xml:space="preserve">
+    <value>Tarification des promotions</value>
+  </data>
+  <data name="valRequireUnitPrice.Text" xml:space="preserve">
+    <value>* Le prix est requis.</value>
+  </data>
+  <data name="valRequireUnitWeight.Text" xml:space="preserve">
+    <value>* Le poids est requis.</value>
+  </data>
+  <data name="valSalePrice.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir un prix valide.</value>
+  </data>
+  <data name="valUnitWeight.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir un poids valide.</value>
+  </data>
+  <data name="lblUnitHeight.Help" xml:space="preserve">
+    <value>Saisir la hauteur du produit par unité.&lt;br/&gt; Si vous utilisez un tarif forfaitaire de livraison,&lt;br/&gt; vous pouvez laisser ce champ vide.</value>
+  </data>
+  <data name="lblUnitHeight.Text" xml:space="preserve">
+    <value>Hauteur :</value>
+  </data>
+  <data name="lblUnitLength.Help" xml:space="preserve">
+    <value>Saisir la longueur du produit par unité.&lt;br/&gt; Si vous utilisez un tarif forfaitaire de livraison,&lt;br/&gt; vous pouvez laisser ce champ vide.</value>
+  </data>
+  <data name="lblUnitLength.Text" xml:space="preserve">
+    <value>Longueur :</value>
+  </data>
+  <data name="lblUnitWidth.Help" xml:space="preserve">
+    <value>Saisir la largeur du produit par unité.&lt;br/&gt; Si vous utilisez un tarif forfaitaire de livraison,&lt;br/&gt; vous pouvez laisser ce champ vide.</value>
+  </data>
+  <data name="lblUnitWidth.Text" xml:space="preserve">
+    <value>Largeur :</value>
+  </data>
+  <data name="valRequireUnitHeight.Text" xml:space="preserve">
+    <value>* La hauteur est requise.</value>
+  </data>
+  <data name="valRequireUnitLength.Text" xml:space="preserve">
+    <value>* La longueur est requise.</value>
+  </data>
+  <data name="valRequireUnitWidth.Text" xml:space="preserve">
+    <value>* La largeur est requise.</value>
+  </data>
+  <data name="valUnitHeight.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir une hauteur valide.</value>
+  </data>
+  <data name="valUnitLength.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir une longueur valide.</value>
+  </data>
+  <data name="valUnitWidth.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir une largeur valide.</value>
+  </data>
+  <data name="valRequireCategory.Text" xml:space="preserve">
+    <value>* Une catégorie est requise.</value>
+  </data>
+  <data name="lblKeywords.Help" xml:space="preserve">
+    <value>Saisir les mots clés séparés par une virgule.&lt;br/&gt;Cette valeur sera insérée dans le META Keywords&lt;br/&gt;lorsque la page de détails du produit est affichée.&lt;br/&gt;Le paramètre Dispositif SEO doit être activé&lt;br/&gt;dans les paramètres de la boutique pour fonctionner.</value>
+  </data>
+  <data name="lblKeywords.Text" xml:space="preserve">
+    <value>Mots clés (SEO) :</value>
+  </data>
+  <data name="lblStockQuantity.Help" xml:space="preserve">
+    <value>Quantité disponible en stock.</value>
+  </data>
+  <data name="lblStockQuantity.Text" xml:space="preserve">
+    <value>Quantité :</value>
+  </data>
+  <data name="valRequireStockQuantity.Text" xml:space="preserve">
+    <value>* La quantité est requise.</value>
+  </data>
+  <data name="valStockQuantity.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir une quantité valide.</value>
+  </data>
+  <data name="lblDeliveryTime.Help" xml:space="preserve">
+    <value>Délai de livraison (en jours).</value>
+  </data>
+  <data name="lblDeliveryTime.Text" xml:space="preserve">
+    <value>Délai de livraison :</value>
+  </data>
+  <data name="lblHighThreshold.Help" xml:space="preserve">
+    <value>Quantité maximale en stock.</value>
+  </data>
+  <data name="lblHighThreshold.Text" xml:space="preserve">
+    <value>Seuil maxi :</value>
+  </data>
+  <data name="lblLowThreshold.Help" xml:space="preserve">
+    <value>Quantité minimum en stock avant réapprovisionnement.</value>
+  </data>
+  <data name="lblLowThreshold.Text" xml:space="preserve">
+    <value>Seuil mini :</value>
+  </data>
+  <data name="valDeliveryTime.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir un nombre de jours.</value>
+  </data>
+  <data name="valHighThreshold.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir une quantité valide.</value>
+  </data>
+  <data name="valLowThreshold.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir une quantité valide.</value>
+  </data>
+  <data name="valRequireDeliveryTime.Text" xml:space="preserve">
+    <value>* Le délai de livraison est requis.</value>
+  </data>
+  <data name="valRequireHighThreshold.Text" xml:space="preserve">
+    <value>* Le seuil maximum est requis.</value>
+  </data>
+  <data name="valRequireLowThreshold.Text" xml:space="preserve">
+    <value>* Le seuil minimum est requis.</value>
+  </data>
+  <data name="dshStockManagement.Text" xml:space="preserve">
+    <value>Gestion du stock</value>
+  </data>
+  <data name="lblPurchasePrice.Help" xml:space="preserve">
+    <value>Prix d'achat du produit.</value>
+  </data>
+  <data name="lblPurchasePrice.Text" xml:space="preserve">
+    <value>Prix d'achat :</value>
+  </data>
+  <data name="valPurchasePrice.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir un prix valide.</value>
+  </data>
+  <data name="valRequirePurchasePrice.Text" xml:space="preserve">
+    <value>* Le prix d'achat est requis.</value>
+  </data>
+  <data name="lblRole.Help" xml:space="preserve">
+    <value>Sélectionner le rôle à appliquer au compte client lorsque ce produit est payé. Si la commande est annulée par le client ou l'administrateur de la boutique, ce rôle sera retiré du compte client.</value>
+  </data>
+  <data name="lblRole.Text" xml:space="preserve">
+    <value>Appliquer le rôle :</value>
+  </data>
+  <data name="EmptyComboValue.Text" xml:space="preserve">
+    <value>(aucun)</value>
+  </data>
+  <data name="valRequireModelName.Text" xml:space="preserve">
+    <value>* Le nom du produit est requis.</value>
+  </data>
+  <data name="valSaleEndDate.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir une date valide.</value>
+  </data>
+  <data name="valSaleStartDate.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir une date valide.</value>
+  </data>
+  <data name="lblSEOName.Help" xml:space="preserve">
+    <value>Saisir le nom SEO à insérer dans l'URL. Seul les lettres (a-z, A-Z), nombres (0-9) et signes : -_ sont autorisés. Le paramètre Dispositif SEO doit être activé dans les paramètres de la boutique pour fonctionner.</value>
+  </data>
+  <data name="lblSEOName.Text" xml:space="preserve">
+    <value>Nom (SEO) :</value>
+  </data>
+  <data name="valRegExSEOName.Text" xml:space="preserve">
+    <value>Caractère(s) invalide(s) !  Seul les lettres (a-z, A-Z), nombres (0-9) et signes : -_ sont autorisés.</value>
+  </data>
+  <data name="WarningTrustLevel.Text" xml:space="preserve">
+    <value>ATTENTION : Votre site web fonctionne actuellement dans le mode de confiance {0} Trust Level. Certains hébergeurs ne permettent pas l'accès à des images ou ressources externes dans ce mode de confiance. Veuillez vérifier que votre site web est autorisé à faire référence à des sites externes si votre image ne s'affiche pas.</value>
+  </data>
+  <data name="valRequireSaleEndDate.Text" xml:space="preserve">
+    <value>* La date de fin de la promotion est requise.</value>
+  </data>
+  <data name="valRequireSalePrice.Text" xml:space="preserve">
+    <value>* Le prix promotionel est requis.</value>
+  </data>
+  <data name="valRequireSaleStartDate.Text" xml:space="preserve">
+    <value>* La date de début de la promotion est requise.</value>
+  </data>
+  <data name="SelectComboValue.Text" xml:space="preserve">
+    <value>--- Sélectionner ---</value>
+  </data>
+  <data name="CategoriesRequired.Text" xml:space="preserve">
+    <value>Au moins une catégorie est nécessaire afin de créer des produits. Veuillez créer d'abord une ou plusieurs catégories, puis vos produits.</value>
+  </data>
+  <data name="lblAllowedDownloads.Help" xml:space="preserve">
+    <value>Saisir le nombre de téléchargements autorisés. Si le téléchargement n'est pas limité, saisir -1.</value>
+  </data>
+  <data name="lblAllowedDownloads.Text" xml:space="preserve">
+    <value>Téléchargements :</value>
+  </data>
+  <data name="lblProductFile.Help" xml:space="preserve">
+    <value>Sélectionner le fichier du produit téléchargeable.</value>
+  </data>
+  <data name="lblProductFile.Text" xml:space="preserve">
+    <value>Fichier produit :</value>
+  </data>
+  <data name="lblVirtualProduct.Help" xml:space="preserve">
+    <value>Cocher si le produit est virtuel.</value>
+  </data>
+  <data name="lblVirtualProduct.Text" xml:space="preserve">
+    <value>Produit virtuel :</value>
+  </data>
+  <data name="valAllowedDownloads.Text" xml:space="preserve">
+    <value>Error! Please enter a valid number.</value>
+  </data>
+  <data name="valRequireAllowedDownloads.Text" xml:space="preserve">
+    <value>* Allowed Downloads is required.</value>
+  </data>
+  <data name="dshDownloadInfos.Text" xml:space="preserve">
+    <value>Informations sur le téléchargement</value>
+  </data>
+  <data name="dshProductDimensions.Text" xml:space="preserve">
+    <value>Dimensions du produit</value>
+  </data>
+  <data name="lblErrorProductFile.Text" xml:space="preserve">
+    <value>Le fichier à télécharger est requis !</value>
+  </data>
+  <data name="valSaleDates.Text" xml:space="preserve">
+    <value>* La date de fin de la promotion doit être postérieure à la date de début de la promotion !</value>
+  </data>
+  <data name="lblRegularPrice.Help" xml:space="preserve">
+    <value>Prix courant du produit à l'unité.</value>
+  </data>
+  <data name="lblRegularPrice.Text" xml:space="preserve">
+    <value>Prix courant :</value>
+  </data>
+  <data name="valRegularPrice.Text" xml:space="preserve">
+    <value>Erreur ! Veuillez saisir un prix valide.</value>
+  </data>
+  <data name="valRequireRegularPrice.Text" xml:space="preserve">
+    <value>* Le prix courant est requis.</value>
+  </data>
+  <data name="cmdSuggest.Text" xml:space="preserve">
+    <value>Suggérer</value>
+  </data>
+</root>

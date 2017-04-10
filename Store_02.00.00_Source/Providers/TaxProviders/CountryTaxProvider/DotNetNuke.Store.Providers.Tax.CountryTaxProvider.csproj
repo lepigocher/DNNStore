@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4CA50EE9-0607-419D-9EB1-E03DB2D0FF5A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNetNuke.Modules.Store.Providers.Tax.CountryTaxProvider</RootNamespace>
+    <AssemblyName>DotNetNuke.Modules.Store.Providers.Tax.CountryTaxProvider</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke, Version=4.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\DotNetNuke.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CountryTaxAdmin.ascx.cs">
+      <DependentUpon>CountryTaxAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CountryTaxAdmin.ascx.designer.cs">
+      <DependentUpon>CountryTaxAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CountryTaxCheckout.ascx.cs">
+      <DependentUpon>CountryTaxCheckout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CountryTaxCheckout.ascx.designer.cs">
+      <DependentUpon>CountryTaxCheckout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CountryTaxInfo.cs" />
+    <Compile Include="CountryTaxRates.cs" />
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaxController.cs" />
+    <Compile Include="TaxInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Admin\DotNetNuke.Store.Admin.csproj">
+      <Project>{C82B8EDC-1246-4F04-BDF7-FAC1468B9351}</Project>
+      <Name>DotNetNuke.Store.Admin</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Cart\DotNetNuke.Store.Cart.csproj">
+      <Project>{643E0708-2DF7-4727-8032-D4EC0B0EF72D}</Project>
+      <Name>DotNetNuke.Store.Cart</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Components\DotNetNuke.Store.Components.csproj">
+      <Project>{933F85DC-00FE-494A-8604-F8C5D62F85DD}</Project>
+      <Name>DotNetNuke.Store.Components</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Customer\DotNetNuke.Store.Customer.csproj">
+      <Project>{6BCB0DBD-6F52-4481-92C2-901CB78A21D6}</Project>
+      <Name>DotNetNuke.Store.Customer</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DotNetNuke.Store.Providers.csproj">
+      <Project>{1E004752-A1DD-46C2-9AB5-687C2B4555D7}</Project>
+      <Name>DotNetNuke.Store.Providers</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CountryTaxAdmin.ascx" />
+    <Content Include="CountryTaxCheckout.ascx" />
+    <Content Include="CountryTaxProviderInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\CountryTaxAdmin.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\CountryTaxCheckout.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54285</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/DotNetNuke_2/DesktopModules/Store/Providers/TaxProviders/CountryTaxProvider</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/DotNetNuke_2/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>copy $(ProjectDir)*.ascx $(SolutionDir)Store_02.00.00_Install
+copy $(ProjectDir)App_LocalResources\*.ascx.resx $(SolutionDir)Store_02.00.00_Install
+copy $(TargetPath) $(SolutionDir)Store_02.00.00_Install
+copy $(ProjectDir)CountryTaxProviderInfo.xml $(SolutionDir)Store_02.00.00_Install
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider md $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider
+copy $(ProjectPath) $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider
+copy $(ProjectDir)*.cs $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider\Properties md $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider\Properties
+copy $(ProjectDir)Properties\*.cs $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider\Properties
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider\App_LocalResources md $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider\App_LocalResources
+copy $(ProjectDir)App_LocalResources\*.ascx.resx $(SolutionDir)Store_02.00.00_Source\Providers\TaxProviders\CountryTaxProvider\App_LocalResources
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

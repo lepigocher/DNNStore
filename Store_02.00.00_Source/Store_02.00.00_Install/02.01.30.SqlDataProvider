@@ -1,0 +1,20 @@
+﻿IF EXISTS (SELECT [id] FROM dbo.[sysobjects] WHERE parent_obj=OBJECT_ID(N'{databaseOwner}[{objectQualifier}Store_Orders]') AND [name]=N'FK_Store_Orders_Store_OrderStatus')
+ALTER TABLE {databaseOwner}{objectQualifier}Store_Orders DROP CONSTRAINT [FK_Store_Orders_Store_OrderStatus]
+GO
+
+--Modify the name of the Clustered Index for the Store_OrderStatus table
+IF EXISTS (SELECT [id] FROM dbo.[sysobjects] WHERE parent_obj=OBJECT_ID(N'{databaseOwner}[{objectQualifier}Store_OrderStatus]') AND [name]=N'PK_Store_OrderStatus')
+BEGIN
+exec sp_rename 'PK_Store_OrderStatus','PK_{objectQualifier}Store_OrderStatus','OBJECT'
+END
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}Store_Orders ADD CONSTRAINT [FK_{objectQualifier}Store_Orders_{objectQualifier}Store_OrderStatus] FOREIGN KEY ([OrderStatusID]) REFERENCES {databaseOwner}{objectQualifier}Store_OrderStatus ([OrderStatusID])
+GO
+
+--Modify the name of the Clustered Index for the Store_ShippingRates table
+IF EXISTS (SELECT [id] FROM dbo.[sysobjects] WHERE parent_obj=OBJECT_ID(N'{databaseOwner}[{objectQualifier}Store_ShippingRates]') AND [name]=N'PK_Store_ShippingRates')
+BEGIN
+exec sp_rename 'PK_Store_ShippingRates','PK_{objectQualifier}Store_ShippingRates','OBJECT'
+END
+GO

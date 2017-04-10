@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<provider>
+	<name>Country</name>
+	<description>Country Tax Provider</description>
+	<class>DotNetNuke.Modules.Store.Providers.Tax.CountryTaxProvider.TaxController</class>
+	<assembly>DotNetNuke.Modules.Store.Providers.Tax.CountryTaxProvider</assembly>
+	<controls>
+		<control name="Admin" value="CountryTaxAdmin.ascx" />
+		<control name="Checkout" value="CountryTaxCheckout.ascx" />
+	</controls>
+</provider>
+

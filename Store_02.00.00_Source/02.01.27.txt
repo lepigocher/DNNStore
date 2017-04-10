@@ -1,0 +1,1 @@
+DesktopModules\Store\App_LocalResources\ListItemTemplate.ascx.resx

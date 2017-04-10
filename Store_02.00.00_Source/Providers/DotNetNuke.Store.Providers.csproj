@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E004752-A1DD-46C2-9AB5-687C2B4555D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNetNuke.Modules.Store.Providers</RootNamespace>
+    <AssemblyName>DotNetNuke.Modules.Store.Providers</AssemblyName>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke, Version=4.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\DotNetNuke.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressCheckoutControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Address\IAddressInfo.cs" />
+    <Compile Include="Address\IAddressProvider.cs" />
+    <Compile Include="Cart\ICartItemAttributeInfo.cs" />
+    <Compile Include="Cart\ICartItemInfo.cs" />
+    <Compile Include="CheckoutControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="IProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProviderController.cs" />
+    <Compile Include="ProviderControllerBase.cs" />
+    <Compile Include="ProviderFactory.cs" />
+    <Compile Include="ProviderInfo.cs" />
+    <Compile Include="ProviderSettingsHelper.cs" />
+    <Compile Include="Shipping\IShippingInfo.cs" />
+    <Compile Include="Shipping\IShippingProvider.cs" />
+    <Compile Include="ProviderExceptions.cs" />
+    <Compile Include="Tax\ITaxInfo.cs" />
+    <Compile Include="Tax\ITaxProvider.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)Store_02.00.00_Install
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers md $(SolutionDir)Store_02.00.00_Source\Providers
+copy $(ProjectPath) $(SolutionDir)Store_02.00.00_Source\Providers
+copy $(ProjectDir)*.cs $(SolutionDir)Store_02.00.00_Source\Providers
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\Properties md $(SolutionDir)Store_02.00.00_Source\Providers\Properties
+copy $(ProjectDir)Properties\*.cs $(SolutionDir)Store_02.00.00_Source\Providers\Properties
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\Address md $(SolutionDir)Store_02.00.00_Source\Providers\Address
+copy $(ProjectDir)Address\*.cs $(SolutionDir)Store_02.00.00_Source\Providers\Address
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\Cart md $(SolutionDir)Store_02.00.00_Source\Providers\Cart
+copy $(ProjectDir)Cart\*.cs $(SolutionDir)Store_02.00.00_Source\Providers\Cart
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\Shipping md $(SolutionDir)Store_02.00.00_Source\Providers\Shipping
+copy $(ProjectDir)Shipping\*.cs $(SolutionDir)Store_02.00.00_Source\Providers\Shipping
+if not exist $(SolutionDir)Store_02.00.00_Source\Providers\Tax md $(SolutionDir)Store_02.00.00_Source\Providers\Tax
+copy $(ProjectDir)Tax\*.cs $(SolutionDir)Store_02.00.00_Source\Providers\Tax</PostBuildEvent>
+  </PropertyGroup>
+</Project>

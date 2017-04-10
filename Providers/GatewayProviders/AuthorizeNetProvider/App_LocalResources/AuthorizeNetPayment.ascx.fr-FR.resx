@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblCardNumber.Help" xml:space="preserve">
+    <value>Saisissez le numéro de votre carte.</value>
+  </data>
+  <data name="lblCardNumber.Text" xml:space="preserve">
+    <value>Numéro de la carte</value>
+  </data>
+  <data name="lblCSC.Help" xml:space="preserve">
+    <value>Le cryptogramme visuel se compose de trois ou quatre chiffres imprimés au verso de votre carte. Il est parfois indiqué à la suite (à droite) du numéro de la carte.</value>
+  </data>
+  <data name="lblCSC.Text" xml:space="preserve">
+    <value>Cryptogramme visuel</value>
+  </data>
+  <data name="lblExpiryDate.Help" xml:space="preserve">
+    <value>Saisissez la date de validité de la carte.</value>
+  </data>
+  <data name="lblExpiryDate.Text" xml:space="preserve">
+    <value>Date d'expiration</value>
+  </data>
+  <data name="lblPaymentTitle.Help" xml:space="preserve">
+    <value>Saisissez les informations de votre carte de crédit.</value>
+  </data>
+  <data name="lblPaymentTitle.Text" xml:space="preserve">
+    <value>Détails du paiement</value>
+  </data>
+  <data name="ErrorBillingAddress.Text" xml:space="preserve">
+    <value>Veuillez indiquer une adresse de facturation.</value>
+  </data>
+  <data name="ErrorCardInformation.Text" xml:space="preserve">
+    <value>Veuillez indiquer les informations de votre carte bancaire.</value>
+  </data>
+  <data name="ErrorCardNotValid.Text" xml:space="preserve">
+    <value>Les informations de la carte bancaire ne sont pas valides !</value>
+  </data>
+  <data name="ErrorNotSecured.Text" xml:space="preserve">
+    <value>La page n'est pas sécurisée par SSL, vous ne pouvez pas utiliser Authorize.Net sans certificat SSL.</value>
+  </data>
+  <data name="ErrorPaymentOption.Text" xml:space="preserve">
+    <value>Une option de paiement n'a pas été paramétrée. Veuillez contacter l'administrateur pour lui signaler cette erreur.</value>
+  </data>
+  <data name="btnProcess.Text" xml:space="preserve">
+    <value>Confirmer</value>
+  </data>
+  <data name="lblConfirmMessage.Text" xml:space="preserve">
+    <value>Notez qu'en cliquant sur ce bouton, vous reconnaissez avoir lu et approuvé les conditions d'utilisation de {0}.</value>
+  </data>
+  <data name="ErrorConnection.Text" xml:space="preserve">
+    <value>Connexion indisponible.</value>
+  </data>
+  <data name="ErrorUnexpected.Text" xml:space="preserve">
+    <value>Une erreur inattendue est survenue.</value>
+  </data>
+  <data name="OrderDateFormat.Text" xml:space="preserve">
+    <value>dd/MM/yyyy HH:mm</value>
+  </data>
+  <data name="ResponseCode1.Text" xml:space="preserve">
+    <value>Cette transaction a été approuvée.</value>
+  </data>
+  <data name="ReasonCode10.Text" xml:space="preserve">
+    <value>Le numéro de compte est incorrect.</value>
+  </data>
+  <data name="ReasonCode11.Text" xml:space="preserve">
+    <value>Une transaction dupliquée a été soumise.</value>
+  </data>
+  <data name="ReasonCode12.Text" xml:space="preserve">
+    <value>Un code d'autorisation requis n'est pas présent.</value>
+  </data>
+  <data name="ReasonCode13.Text" xml:space="preserve">
+    <value>L'identifiant du marchant est incorrect ou le compte est inactif.</value>
+  </data>
+  <data name="ReasonCode14.Text" xml:space="preserve">
+    <value>L'URL du site référent ou de la réponse est incorrect.</value>
+  </data>
+  <data name="ReasonCode15.Text" xml:space="preserve">
+    <value>L'identifiant de la transaction est incorrect.</value>
+  </data>
+  <data name="ResponseCode2.Text" xml:space="preserve">
+    <value>Cette transaction a été déclinée.</value>
+  </data>
+  <data name="ResponseCode3.Text" xml:space="preserve">
+    <value>Une erreur est survenue lors du traitement de cette transaction.</value>
+  </data>
+  <data name="ResponseCode4.Text" xml:space="preserve">
+    <value>Cette transaction est retenue pour examen.</value>
+  </data>
+  <data name="ReasonCode5.Text" xml:space="preserve">
+    <value>Un montant valide est requis.</value>
+  </data>
+  <data name="ReasonCode6.Text" xml:space="preserve">
+    <value>Le numéro de la carte est incorrect.</value>
+  </data>
+  <data name="ReasonCode7.Text" xml:space="preserve">
+    <value>La date d'expiration de la carte est incorrecte.</value>
+  </data>
+  <data name="ReasonCode8.Text" xml:space="preserve">
+    <value>La carte est expirée.</value>
+  </data>
+  <data name="ReasonCode9.Text" xml:space="preserve">
+    <value>Le code ABA est incorrect.</value>
+  </data>
+  <data name="ReasonMessage.Text" xml:space="preserve">
+    <value>{0}  - Code : {1} {2}</value>
+  </data>
+  <data name="rfvNumber.ErrorMessage" xml:space="preserve">
+    <value>* Requis</value>
+  </data>
+  <data name="rfvVer.ErrorMessage" xml:space="preserve">
+    <value>* Requis</value>
+  </data>
+  <data name="RequiresPayment.Text" xml:space="preserve">
+    <value>IMPORTANT : Votre commande doit être réglée. Si vous désirez régler par un moyen de paiement spécifique, ou que vous désirez annuler votre commande, veuillez nous contacter à l'adresse {0}, ou en répondant à ce message.</value>
+  </data>
+  <data name="Processing.Text" xml:space="preserve">
+    <value>Traitement, veuillez patienter !</value>
+  </data>
+  <data name="AdminOrderEmailBody.Text" xml:space="preserve">
+    <value>Un nouvelle commande a été confirmée sur [Store:Name]
+
+N° de commande : [Order:OrderID]
+Date de commande : [Order:OrderDate]
+Total commande : [Order:GrandTotal]
+
+Veuillez vous connecter à votre portail et aller sur la page d'administration de la boutique pour plus d'information sur cette commande.</value>
+  </data>
+  <data name="AdminOrderEmailSubject.Text" xml:space="preserve">
+    <value>Nouvelle commande n°[Order:OrderID] sur [Store:Name]</value>
+  </data>
+  <data name="AdminStatusChangedEmailBody.Text" xml:space="preserve">
+    <value>Le statut de la commande n°[Order:OrderID] est passé à "[Order:Status]".
+
+Veuillez vous connecter à votre portail et aller sur la page d'administration de la boutique pour plus d'information sur cette commande.</value>
+  </data>
+  <data name="AdminStatusChangedEmailSubject.Text" xml:space="preserve">
+    <value>Le statut de la commande n°[Order:OrderID] est passé à "[Order:Status]"</value>
+  </data>
+  <data name="CustomerOrderEmailBody.Text" xml:space="preserve">
+    <value>Nous vous remercions pour votre commande sur notre boutique en ligne [Store:Name].
+
+Veuillez trouver ci-dessous votre numéro de commande, ainsi qu'un récapitulatif. Si vous avez créé un compte utilisateur, vous pouvez contrôler l'état d'avancement de votre commande à tout moment en vous connectant sur notre site, puis en cliquant sur le lien "[Store:ShoppingCartPageName]". Pour toute question relative à votre commande, veuillez nous contacter à l'adresse [Store:Email], ou en répondant à ce message.
+
+Numéro de commande : [Order:OrderID] - En date du : [Order:OrderDate]
+
+Récapitulatif de la commande
+
+[DETAILS]
+[OrderDetail:ProductTitle] x [OrderDetail:Quantity] à [OrderDetail:ExtendedAmount] (PUHT)
+[/DETAILS]
+
+Sous-total : [Order:OrderTotal] HT
+[IFDISCOUNT]Réduction : [Order:Discount] HT[/IFDISCOUNT]
+[IFSHIPPINGCOST]Frais d'expédition : [Order:ShippingCost] HT[/IFSHIPPINGCOST]
+TVA : [Order:TaxTotal]
+Total: [Order:GrandTotal] TTC
+
+Addresse de facturation :
+
+[BillingAddress]
+[IFSHIPPING]
+
+Addresse de livraison :
+
+[ShippingAddress]
+[/IFSHIPPING][IFPICKUP]
+
+Votre commande sera disponible à l'adresse ci-dessous lorsque vous aurez reçu la notification de sa disponibilité.
+
+(indiquer ici l'adresse de l'entrepot ou du magasin)
+[/IFPICKUP]
+
+Cette facture est assujettie à nos conditions générales de ventes.
+Si pour une raison quelconque votre commande ne peut pas être traitée, un de nos représentants du service clientèle vous contactera sans délai.
+
+Nous vous remercions à nouveau pour votre confiance.</value>
+  </data>
+  <data name="CustomerOrderEmailSubject.Text" xml:space="preserve">
+    <value>[Store:Name] - Confirmation de votre commande n°[Order:OrderID]</value>
+  </data>
+  <data name="CustomerStatusChangedEmailBody.Text" xml:space="preserve">
+    <value>Vous avez passé commande récemment sur notre site [Store:Name]
+
+Le statut de la commande n°[Order:OrderID] est passé à "[Order:Status]".
+
+Si vous avez des questions au sujet de ce changement de statut, veuillez nous contacter à l'adresse [Store:Email], ou en répondant simplement à ce courriel.
+
+Si vous avez créé un compte utilisateur, vous pouvez contrôler le statut de votre commande à tout moment en vous connectant sur notre site web et en cliquant sur le lien [Store:ShoppingCartPageName].
+
+Nous vous remercions à nouveau pour votre confiance.</value>
+  </data>
+  <data name="CustomerStatusChangedEmailSubject.Text" xml:space="preserve">
+    <value>Le statut de votre commande n°[Order:OrderID] est passé à "[Order:Status]"</value>
+  </data>
+</root>
