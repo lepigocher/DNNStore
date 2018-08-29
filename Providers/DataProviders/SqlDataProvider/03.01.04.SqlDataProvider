@@ -516,12 +516,12 @@ CREATE TABLE {databaseOwner}[{objectQualifier}Store_Coupons] (
 	Validity int NOT NULL,
 	CreatedByUserID int NOT NULL,
 	CreatedDate datetime NOT NULL
-	) 
+	)  ON [PRIMARY]
 GO
 
 IF NOT EXISTS (SELECT * FROM {databaseOwner}sysobjects WHERE id = object_id(N'{databaseOwner}{objectQualifier}Store_Coupons') AND OBJECTPROPERTY(id, N'IsPrimaryKey') = 1)
 ALTER TABLE {databaseOwner}[{objectQualifier}Store_Coupons] ADD CONSTRAINT
-	PK_{objectQualifier}Store_Coupons PRIMARY KEY CLUSTERED (CouponID)
+	PK_{objectQualifier}Store_Coupons PRIMARY KEY CLUSTERED (CouponID) ON [PRIMARY]
 GO
 
 IF EXISTS (SELECT * FROM {databaseOwner}[sysobjects] WHERE id = object_id(N'{databaseOwner}[{objectQualifier}Store_Coupons_AddCoupon]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)

@@ -120,19 +120,19 @@
   <data name="btnSaveShippingFee.Text" xml:space="preserve">
     <value>Enregistrer les frais d'expédition</value>
   </data>
-  <data name="ErrorCost.Text" xml:space="preserve">
-    <value>Vous devez fournir une valeur numérique pour le coût&lt;/br&gt;(ne pas inclure le symbole monétaire).</value>
+  <data name="valCompCost.Text" xml:space="preserve">
+    <value>Vous devez fournir une valeur numérique pour le coût (ne pas inclure le symbole monétaire).</value>
   </data>
-  <data name="ErrorMaxLTMin.Text" xml:space="preserve">
+  <data name="valCompMaxGTMin.Text" xml:space="preserve">
     <value>Le poids maximum doit être supérieur au poids minimum.</value>
   </data>
-  <data name="ErrorMaxWeight.Text" xml:space="preserve">
+  <data name="valCompMaxWeight.Text" xml:space="preserve">
     <value>Vous devez fournir une valeur numérique pour le poids maximum.</value>
   </data>
-  <data name="ErrorMinWeight.Text" xml:space="preserve">
+  <data name="valCompMinWeight.Text" xml:space="preserve">
     <value>Vous devez fournir une valeur numérique pour le poids minimum.</value>
   </data>
-  <data name="ErrorRateDescription.Text" xml:space="preserve">
+  <data name="valReqDescription.Text" xml:space="preserve">
     <value>Vous devez fournir la description des frais d'expédition.</value>
   </data>
   <data name="lblCostTitle.Text" xml:space="preserve">
@@ -161,5 +161,17 @@
   </data>
   <data name="lblApplyTaxRate.Text" xml:space="preserve">
     <value>Appliquer le taux de taxe :</value>
+  </data>
+  <data name="valReqCost.Text" xml:space="preserve">
+    <value>Vous devez fournir un coût.</value>
+  </data>
+  <data name="valReqMaxWeight.Text" xml:space="preserve">
+    <value>Vous devez fournir un poids maximum.</value>
+  </data>
+  <data name="valReqMinWeight.Text" xml:space="preserve">
+    <value>Vous devez fournir un poids minimum.</value>
+  </data>
+  <data name="shShippingProvider.Text" xml:space="preserve">
+    <value>Gestion des frais d'expédition</value>
   </data>
 </root>

@@ -1,2 +1,0 @@
-DesktopModules\Store\StoreNavigation.cs
-DesktopModules\Store\CartNavigation.cs

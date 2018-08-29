@@ -112,16 +112,19 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CategorySlug.Text" xml:space="preserve">
     <value>categorie</value>
   </data>
   <data name="ControlNotFound.Error" xml:space="preserve">
     <value>Control {0} introuvable !</value>
+  </data>
+  <data name="NotEnoughProducts.Text" xml:space="preserve">
+    <value>Désolé, il n'y a pas suffisamment de produits en stock pour répondre à votre demande.</value>
   </data>
   <data name="ProductSlug.Text" xml:space="preserve">
     <value>produit</value>

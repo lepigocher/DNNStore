@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblCatTemplate.Text" xml:space="preserve">
     <value>Gabarit du catalogue :</value>
@@ -225,25 +225,25 @@
   <data name="CPLSamePage.Text" xml:space="preserve">
     <value>Même page</value>
   </data>
-  <data name="dshGenSettings.Text" xml:space="preserve">
+  <data name="shGenSettings.Text" xml:space="preserve">
     <value>Paramètres généraux</value>
   </data>
-  <data name="dshFeaturedProductList.Text" xml:space="preserve">
+  <data name="shFeaturedProductList.Text" xml:space="preserve">
     <value>Paramètres des produits en promotion</value>
   </data>
-  <data name="dshPopularProductList.Text" xml:space="preserve">
+  <data name="shPopularProductList.Text" xml:space="preserve">
     <value>Paramètres des produits populaires</value>
   </data>
-  <data name="dshCategoryProductList.Text" xml:space="preserve">
+  <data name="shCategoryProductList.Text" xml:space="preserve">
     <value>Paramètres des produits par catégorie</value>
   </data>
-  <data name="dshProductDetails.Text" xml:space="preserve">
+  <data name="shProductDetails.Text" xml:space="preserve">
     <value>Paramètres du détail des produits</value>
   </data>
   <data name="ControlTitle_settings.Text" xml:space="preserve">
     <value>Paramètres du catalogue</value>
   </data>
-  <data name="dshNewProductList.Text" xml:space="preserve">
+  <data name="shNewProductList.Text" xml:space="preserve">
     <value>Paramètres des nouveaux produits</value>
   </data>
   <data name="lblNPSColumns.Text" xml:space="preserve">
@@ -570,7 +570,7 @@
   <data name="lblSSSearchColumn.Text" xml:space="preserve">
     <value>Rechercher par :</value>
   </data>
-  <data name="dshSearchProduct.Text" xml:space="preserve">
+  <data name="shSearchProduct.Text" xml:space="preserve">
     <value>Paramètres de la recherche</value>
   </data>
   <data name="lblCSSortColumns.Help" xml:space="preserve">
@@ -597,7 +597,7 @@
   <data name="lblEnableImageCaching.Text" xml:space="preserve">
     <value>Images en cache :</value>
   </data>
-  <data name="dshSortProduct.Text" xml:space="preserve">
+  <data name="shSortProduct.Text" xml:space="preserve">
     <value>Paramètres de tri</value>
   </data>
   <data name="lblAllowPrint.Help" xml:space="preserve">
@@ -606,7 +606,7 @@
   <data name="lblAllowPrint.Text" xml:space="preserve">
     <value>Autoriser l'impression :</value>
   </data>
-  <data name="dshAlsoBoughtProductList.Text" xml:space="preserve">
+  <data name="shAlsoBoughtProductList.Text" xml:space="preserve">
     <value>Paramètres des produits achetés conjointement</value>
   </data>
   <data name="lblABPSColumns.Help" xml:space="preserve">

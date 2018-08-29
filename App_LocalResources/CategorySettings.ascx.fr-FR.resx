@@ -112,21 +112,21 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="labelColumnCount.Text" xml:space="preserve">
-    <value>Nb de colonnes</value>
+  <data name="lblColumnCount.Text" xml:space="preserve">
+    <value>Nombre de colonnes :</value>
   </data>
-  <data name="labelColumnCount.Help" xml:space="preserve">
+  <data name="lblColumnCount.Help" xml:space="preserve">
     <value>Nombre de colonnes à utiliser pour l'affichage des catégories de la boutique.</value>
   </data>
-  <data name="labelCatalogPage.Text" xml:space="preserve">
-    <value>Page du catalogue</value>
+  <data name="lblCatalogPage.Text" xml:space="preserve">
+    <value>Page du catalogue :</value>
   </data>
-  <data name="labelCatalogPage.Help" xml:space="preserve">
+  <data name="lblCatalogPage.Help" xml:space="preserve">
     <value>Page où le contenu du catalogue de la boutique est affiché.</value>
   </data>
   <data name="SamePage.Text" xml:space="preserve">
@@ -135,11 +135,11 @@
   <data name="ControlTitle_settings.Text" xml:space="preserve">
     <value>Paramètres des catégories</value>
   </data>
-  <data name="labelDisplayMode.Help" xml:space="preserve">
+  <data name="lblDisplayMode.Help" xml:space="preserve">
     <value>Sélectionner le type d'affichage. Tableau est le mode par défaut, les catégories sont affichées dans un tableau HTML. Tandis que Liste affiche les catégories en utilisant une liste HTML non ordonée (UL &gt; LI). Le mode Liste permet aux webdesigners d'utiliser certains scripts jQuery ou Java pour gérer l'affichage des catégories.</value>
   </data>
-  <data name="labelDisplayMode.Text" xml:space="preserve">
-    <value>Mode d'affichage</value>
+  <data name="lblDisplayMode.Text" xml:space="preserve">
+    <value>Mode d'affichage :</value>
   </data>
   <data name="ListMode.Text" xml:space="preserve">
     <value>Liste</value>

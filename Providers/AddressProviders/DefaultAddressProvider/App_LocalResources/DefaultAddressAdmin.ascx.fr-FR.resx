@@ -213,4 +213,7 @@
   <data name="lblLastName.Text" xml:space="preserve">
     <value>Nom :</value>
   </data>
+  <data name="shAddressProvider.Text" xml:space="preserve">
+    <value>Gestionnaire d'adresses</value>
+  </data>
 </root>

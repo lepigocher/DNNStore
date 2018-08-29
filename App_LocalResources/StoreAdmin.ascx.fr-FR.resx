@@ -174,12 +174,6 @@
   <data name="lblStorePageID.Text" xml:space="preserve">
     <value>Page de la boutique :</value>
   </data>
-  <data name="dshShippingProvider.Text" xml:space="preserve">
-    <value>Gestion des frais d'expédition</value>
-  </data>
-  <data name="dshTaxProvider.Text" xml:space="preserve">
-    <value>Gestion des taxes</value>
-  </data>
   <data name="lblCurrencySymbol.Help" xml:space="preserve">
     <value>Symbole monétaire utilisé pour le prix des produits</value>
   </data>
@@ -277,31 +271,31 @@
     <value>Compte anonyme :</value>
   </data>
   <data name="valRegExEmail.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Une adresse de courriel valide est requise !</value>
+    <value>Une adresse de courriel valide est requise !</value>
   </data>
   <data name="valReqCatalogRole.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Sélectionner un rôle autorisé à gérer le catalogue et les avis !</value>
+    <value>Sélectionner un rôle autorisé à gérer le catalogue et les avis !</value>
   </data>
   <data name="valReqImpersonatedUserID.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Sélectionner un compte utilisateur !</value>
+    <value>Sélectionner un compte utilisateur !</value>
   </data>
   <data name="valReqOrderRole.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Sélectionner un rôle autorisé à gérer les commandes !</value>
+    <value>Sélectionner un rôle autorisé à gérer les commandes !</value>
   </data>
   <data name="valReqShoppingCartPageID.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Sélectionner la page où se trouve le panier !</value>
+    <value>Sélectionner la page où se trouve le panier !</value>
   </data>
   <data name="valReqStoreEmail.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* L'adresse de courriel de la boutique est requise !</value>
+    <value>L'adresse de courriel de la boutique est requise !</value>
   </data>
   <data name="valReqStoreName.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Le nom de la boutique est requis !</value>
+    <value>Le nom de la boutique est requis !</value>
   </data>
   <data name="valReqStorePageID.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Sélectionner la page où se trouve le catalogue !</value>
+    <value>Sélectionner la page où se trouve le catalogue !</value>
   </data>
   <data name="valReqGateway.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Sélectionner un opérateur de paiement !</value>
+    <value>Sélectionner un opérateur de paiement !</value>
   </data>
   <data name="lblInventoryManagement.Help" xml:space="preserve">
     <value>Cocher pour permettre la gestion du stock. Si décoché le token [STOCKQUANTITY] ne sera PAS affiché et la quantité de produits ne sera PAS mise à jour.</value>
@@ -321,7 +315,7 @@
   <data name="lblAvoidNegativeStock.Text" xml:space="preserve">
     <value>Eviter stock négatif :</value>
   </data>
-  <data name="dshGatewayProvider.Text" xml:space="preserve">
+  <data name="shGatewayProvider.Text" xml:space="preserve">
     <value>Paramètres de la passerelle de paiement</value>
   </data>
   <data name="lblProviders.Text" xml:space="preserve">
@@ -345,9 +339,6 @@
   <data name="lblAddressProvider.Text" xml:space="preserve">
     <value>Gestionaire d'adresses :</value>
   </data>
-  <data name="dshAddressProvider.Text" xml:space="preserve">
-    <value>Gestionnaire d'adresses</value>
-  </data>
   <data name="lblAllowVirtualProducts.Text" xml:space="preserve">
     <value>Permettre les produits virtuels :</value>
   </data>
@@ -367,7 +358,7 @@
     <value>--- Sélectionner un utilisateur ---</value>
   </data>
   <data name="valReqImpersonatedRoleID.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Sélectionner un rôle !</value>
+    <value>Sélectionner un rôle !</value>
   </data>
   <data name="lblNoDelivery.Help" xml:space="preserve">
     <value>Cocher pour désactiver la gestion des livraisons.</value>
@@ -406,13 +397,13 @@
     <value>Limiter aux pays :</value>
   </data>
   <data name="valCompMinOrderAmount.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Veuillez saisir un montant minimum !</value>
+    <value>Veuillez saisir un montant minimum !</value>
   </data>
   <data name="valReqAuthorizedCountries.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Au moins un pays doit être sélectionné !</value>
+    <value>Au moins un pays doit être sélectionné !</value>
   </data>
   <data name="valReqMinOrderAmount.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Le montant minimum est requis !</value>
+    <value>Le montant minimum est requis !</value>
   </data>
   <data name="lblOnPaidOrder.Help" xml:space="preserve">
     <value>Sélectionner un rôle à appliquer après paiement de la commande.</value>

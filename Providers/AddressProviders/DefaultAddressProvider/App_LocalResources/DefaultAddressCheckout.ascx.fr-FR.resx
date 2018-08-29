@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="SelectBillingAddress.Text" xml:space="preserve">
     <value>Choisir l'adresse de facturation</value>
@@ -141,9 +141,6 @@
   <data name="lblNone.Text" xml:space="preserve">
     <value>Enlèvement (pas de livraison)</value>
   </data>
-  <data name="lblNone.Help" xml:space="preserve">
-    <value>Cette commande ne requière pas de livraison ou ne doit pas être livrée.</value>
-  </data>
   <data name="lblShipAddress.Text" xml:space="preserve">
     <value>Livrer à :</value>
   </data>
@@ -158,12 +155,6 @@
   </data>
   <data name="lblShipAddress.Help" xml:space="preserve">
     <value>Spécifier l'adresse de livraison</value>
-  </data>
-  <data name="lblUseBillingAddress.Help" xml:space="preserve">
-    <value>L'adresse de facturation sera utilisée pour la livraison de la commande.</value>
-  </data>
-  <data name="lblUseShippingAddress.Help" xml:space="preserve">
-    <value>Indiquer une adresse existante pour la livraison.</value>
   </data>
   <data name="lblBillAddress.Help" xml:space="preserve">
     <value>Spécifier l'adresse de facturation</value>

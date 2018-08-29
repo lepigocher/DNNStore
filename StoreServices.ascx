@@ -1,0 +1,1 @@
+<%@ Control Language="C#" ClassName="Store" Inherits="DotNetNuke.Entities.Modules.PortalModuleBase" %><h1>Félicitations</h1><p>Vous venez de créer votre module. Vous pouvez éditer la source du contrôle de module en sélectionnant “Afficher la source” dans le menu d’actions.</p><script runat="server"></script>

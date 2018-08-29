@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblManufacturer.Text" xml:space="preserve">
     <value>Fabriquant :</value>
@@ -178,7 +178,7 @@
     <value>Description détaillée du produit.</value>
   </data>
   <data name="valUnitPrice.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir un prix valide.</value>
+    <value>Veuillez saisir un prix valide.</value>
   </data>
   <data name="lblUnitWeight.Help" xml:space="preserve">
     <value>Saisir le poids du produit par unité.&lt;br/&gt; Si vous utilisez un tarif forfaitaire de livraison,&lt;br/&gt; vous pouvez laisser ce champ vide.</value>
@@ -204,20 +204,20 @@
   <data name="lblSaleStartDate.Text" xml:space="preserve">
     <value>Date de début de la promotion :</value>
   </data>
-  <data name="dshSpecialOffer.Text" xml:space="preserve">
+  <data name="shSpecialOffer.Text" xml:space="preserve">
     <value>Tarification des promotions</value>
   </data>
   <data name="valRequireUnitPrice.Text" xml:space="preserve">
-    <value>* Le prix est requis.</value>
+    <value>Le prix est requis.</value>
   </data>
   <data name="valRequireUnitWeight.Text" xml:space="preserve">
-    <value>* Le poids est requis.</value>
+    <value>Le poids est requis.</value>
   </data>
   <data name="valSalePrice.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir un prix valide.</value>
+    <value>Veuillez saisir un prix valide.</value>
   </data>
   <data name="valUnitWeight.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir un poids valide.</value>
+    <value>Veuillez saisir un poids valide.</value>
   </data>
   <data name="lblUnitHeight.Help" xml:space="preserve">
     <value>Saisir la hauteur du produit par unité.&lt;br/&gt; Si vous utilisez un tarif forfaitaire de livraison,&lt;br/&gt; vous pouvez laisser ce champ vide.</value>
@@ -238,25 +238,25 @@
     <value>Largeur :</value>
   </data>
   <data name="valRequireUnitHeight.Text" xml:space="preserve">
-    <value>* La hauteur est requise.</value>
+    <value>La hauteur est requise.</value>
   </data>
   <data name="valRequireUnitLength.Text" xml:space="preserve">
-    <value>* La longueur est requise.</value>
+    <value>La longueur est requise.</value>
   </data>
   <data name="valRequireUnitWidth.Text" xml:space="preserve">
-    <value>* La largeur est requise.</value>
+    <value>La largeur est requise.</value>
   </data>
   <data name="valUnitHeight.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir une hauteur valide.</value>
+    <value>Veuillez saisir une hauteur valide.</value>
   </data>
   <data name="valUnitLength.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir une longueur valide.</value>
+    <value>Veuillez saisir une longueur valide.</value>
   </data>
   <data name="valUnitWidth.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir une largeur valide.</value>
+    <value>Veuillez saisir une largeur valide.</value>
   </data>
   <data name="valRequireCategory.Text" xml:space="preserve">
-    <value>* Une catégorie est requise.</value>
+    <value>Une catégorie est requise.</value>
   </data>
   <data name="lblKeywords.Help" xml:space="preserve">
     <value>Saisir les mots clés séparés par une virgule.&lt;br/&gt;Cette valeur sera insérée dans le META Keywords&lt;br/&gt;lorsque la page de détails du produit est affichée.&lt;br/&gt;Le paramètre Dispositif SEO doit être activé&lt;br/&gt;dans les paramètres de la boutique pour fonctionner.</value>
@@ -271,10 +271,10 @@
     <value>Quantité :</value>
   </data>
   <data name="valRequireStockQuantity.Text" xml:space="preserve">
-    <value>* La quantité est requise.</value>
+    <value>La quantité est requise.</value>
   </data>
   <data name="valStockQuantity.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir une quantité valide.</value>
+    <value>Veuillez saisir une quantité valide.</value>
   </data>
   <data name="lblDeliveryTime.Help" xml:space="preserve">
     <value>Délai de livraison (en jours).</value>
@@ -295,24 +295,24 @@
     <value>Seuil mini :</value>
   </data>
   <data name="valDeliveryTime.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir un nombre de jours.</value>
+    <value>Veuillez saisir un nombre de jours.</value>
   </data>
   <data name="valHighThreshold.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir une quantité valide.</value>
+    <value>Veuillez saisir une quantité valide.</value>
   </data>
   <data name="valLowThreshold.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir une quantité valide.</value>
+    <value>Veuillez saisir une quantité valide.</value>
   </data>
   <data name="valRequireDeliveryTime.Text" xml:space="preserve">
-    <value>* Le délai de livraison est requis.</value>
+    <value>Le délai de livraison est requis.</value>
   </data>
   <data name="valRequireHighThreshold.Text" xml:space="preserve">
-    <value>* Le seuil maximum est requis.</value>
+    <value>Le seuil maximum est requis.</value>
   </data>
   <data name="valRequireLowThreshold.Text" xml:space="preserve">
-    <value>* Le seuil minimum est requis.</value>
+    <value>Le seuil minimum est requis.</value>
   </data>
-  <data name="dshStockManagement.Text" xml:space="preserve">
+  <data name="shStockManagement.Text" xml:space="preserve">
     <value>Gestion du stock</value>
   </data>
   <data name="lblPurchasePrice.Help" xml:space="preserve">
@@ -322,10 +322,10 @@
     <value>Prix d'achat :</value>
   </data>
   <data name="valPurchasePrice.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir un prix valide.</value>
+    <value>Veuillez saisir un prix valide.</value>
   </data>
   <data name="valRequirePurchasePrice.Text" xml:space="preserve">
-    <value>* Le prix d'achat est requis.</value>
+    <value>Le prix d'achat est requis.</value>
   </data>
   <data name="lblRole.Help" xml:space="preserve">
     <value>Sélectionner le rôle à appliquer au compte client lorsque ce produit est payé. Si la commande est annulée par le client ou l'administrateur de la boutique, ce rôle sera retiré du compte client.</value>
@@ -337,13 +337,13 @@
     <value>(aucun)</value>
   </data>
   <data name="valRequireModelName.Text" xml:space="preserve">
-    <value>* Le nom du produit est requis.</value>
+    <value>Le nom du produit est requis.</value>
   </data>
   <data name="valSaleEndDate.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir une date valide.</value>
+    <value>Veuillez saisir une date valide.</value>
   </data>
   <data name="valSaleStartDate.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir une date valide.</value>
+    <value>Veuillez saisir une date valide.</value>
   </data>
   <data name="lblSEOName.Help" xml:space="preserve">
     <value>Saisir le nom SEO à insérer dans l'URL. Seul les lettres (a-z, A-Z), nombres (0-9) et signes : -_ sont autorisés. Le paramètre Dispositif SEO doit être activé dans les paramètres de la boutique pour fonctionner.</value>
@@ -358,13 +358,13 @@
     <value>ATTENTION : Votre site web fonctionne actuellement dans le mode de confiance {0} Trust Level. Certains hébergeurs ne permettent pas l'accès à des images ou ressources externes dans ce mode de confiance. Veuillez vérifier que votre site web est autorisé à faire référence à des sites externes si votre image ne s'affiche pas.</value>
   </data>
   <data name="valRequireSaleEndDate.Text" xml:space="preserve">
-    <value>* La date de fin de la promotion est requise.</value>
+    <value>La date de fin de la promotion est requise.</value>
   </data>
   <data name="valRequireSalePrice.Text" xml:space="preserve">
-    <value>* Le prix promotionel est requis.</value>
+    <value>Le prix promotionel est requis.</value>
   </data>
   <data name="valRequireSaleStartDate.Text" xml:space="preserve">
-    <value>* La date de début de la promotion est requise.</value>
+    <value>La date de début de la promotion est requise.</value>
   </data>
   <data name="SelectComboValue.Text" xml:space="preserve">
     <value>--- Sélectionner ---</value>
@@ -391,22 +391,22 @@
     <value>Produit virtuel :</value>
   </data>
   <data name="valAllowedDownloads.Text" xml:space="preserve">
-    <value>Error! Please enter a valid number.</value>
+    <value>Veuillez saisir un nombre valide.</value>
   </data>
   <data name="valRequireAllowedDownloads.Text" xml:space="preserve">
-    <value>* Allowed Downloads is required.</value>
+    <value>Le nombre de téléchargements est requis.</value>
   </data>
-  <data name="dshDownloadInfos.Text" xml:space="preserve">
+  <data name="shDownloadInfos.Text" xml:space="preserve">
     <value>Informations sur le téléchargement</value>
   </data>
-  <data name="dshProductDimensions.Text" xml:space="preserve">
+  <data name="shProductDimensions.Text" xml:space="preserve">
     <value>Dimensions du produit</value>
   </data>
   <data name="lblErrorProductFile.Text" xml:space="preserve">
     <value>Le fichier à télécharger est requis !</value>
   </data>
   <data name="valSaleDates.Text" xml:space="preserve">
-    <value>* La date de fin de la promotion doit être postérieure à la date de début de la promotion !</value>
+    <value>La date de fin de la promotion doit être postérieure à la date de début de la promotion !</value>
   </data>
   <data name="lblRegularPrice.Help" xml:space="preserve">
     <value>Prix courant du produit à l'unité.</value>
@@ -415,10 +415,10 @@
     <value>Prix courant :</value>
   </data>
   <data name="valRegularPrice.Text" xml:space="preserve">
-    <value>Erreur ! Veuillez saisir un prix valide.</value>
+    <value>Veuillez saisir un prix valide.</value>
   </data>
   <data name="valRequireRegularPrice.Text" xml:space="preserve">
-    <value>* Le prix courant est requis.</value>
+    <value>Le prix courant est requis.</value>
   </data>
   <data name="cmdSuggest.Text" xml:space="preserve">
     <value>Suggérer</value>

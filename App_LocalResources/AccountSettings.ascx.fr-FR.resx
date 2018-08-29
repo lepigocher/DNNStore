@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblRequireSSL.Text" xml:space="preserve">
     <value>Forcer SSL lors du contrôle</value>
@@ -135,7 +135,7 @@
   <data name="ControlTitle_settings.Text" xml:space="preserve">
     <value>Paramètres du compte</value>
   </data>
-  <data name="dshMainCartSettings.Text" xml:space="preserve">
+  <data name="shMainCartSettings.Text" xml:space="preserve">
     <value>Paramètres du panier</value>
   </data>
   <data name="lblIncludeVAT.Help" xml:space="preserve">
@@ -199,22 +199,22 @@
     <value>Lien vers détail :</value>
   </data>
   <data name="valCompCacheDuration.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Une valeur numérique est requise !</value>
+    <value>Une valeur numérique est requise !</value>
   </data>
   <data name="valRegExGIFBgColor.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Un code couleur HTML valide est requis !</value>
+    <value>Un code couleur HTML valide est requis !</value>
   </data>
   <data name="valReqCacheDuration.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* La durée du cache est requise !</value>
+    <value>La durée du cache est requise !</value>
   </data>
   <data name="valReqGIFBgColor.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* La couleur de fond pour les images GIF est requise !</value>
+    <value>La couleur de fond pour les images GIF est requise !</value>
   </data>
   <data name="valCompThumbnailWidth.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Une valeur numérique est requise !</value>
+    <value>Une valeur numérique est requise !</value>
   </data>
   <data name="valReqThumbnailWidth.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* La largeur de vignette est requise !</value>
+    <value>La largeur de vignette est requise !</value>
   </data>
   <data name="lblCacheDuration.Help" xml:space="preserve">
     <value>Saisir la durée du cache (en minutes) pour les images. Valeur par défaut : 2 minutes.</value>

@@ -1,0 +1,17 @@
+bin\DotNetNuke.Modules.Store.Admin.dll
+bin\DotNetNuke.Modules.Store.Admin.SqlDataProvider.dll
+bin\DotNetNuke.Modules.Store.Cart.dll
+bin\DotNetNuke.Modules.Store.Cart.SqlDataProvider.dll
+bin\DotNetNuke.Modules.Store.Catalog.dll
+bin\DotNetNuke.Modules.Store.Catalog.SqlDataProvider.dll
+bin\DotNetNuke.Modules.Store.Components.dll
+bin\DotNetNuke.Modules.Store.Coupon.dll
+bin\DotNetNuke.Modules.Store.Coupon.SqlDataProvider.dll
+bin\DotNetNuke.Modules.Store.Customer.dll
+bin\DotNetNuke.Modules.Store.Customer.SqlDataProvider.dll
+bin\DotNetNuke.Modules.Store.Providers.Address.DefaultAddressProvider.SqlDataProvider.dll
+bin\DotNetNuke.Modules.Store.Providers.dll
+bin\DotNetNuke.Modules.Store.Providers.Shipping.DefaultShippingProvider.SqlDataProvider.dll
+bin\DotNetNuke.Modules.Store.Providers.Tax.CountryTaxProvider.SqlDataProvider.dll
+bin\DotNetNuke.Modules.Store.Providers.Tax.DefaultTaxProvider.SqlDataProvider.dll
+DesktopModules\Store\History.txt

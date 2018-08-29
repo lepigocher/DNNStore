@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblThumbnailWidth.Text" xml:space="preserve">
     <value>Largeur de vignette :</value>
@@ -166,22 +166,22 @@
     <value>Lien vers détail :</value>
   </data>
   <data name="valCompCacheDuration.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Une valeur numérique est requise !</value>
+    <value>Une valeur numérique est requise !</value>
   </data>
   <data name="valRegExGIFBgColor.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Un code couleur HTML valide est requis !</value>
+    <value>Un code couleur HTML valide est requis !</value>
   </data>
   <data name="valReqCacheDuration.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* La durée du cache est requise !</value>
+    <value>La durée du cache est requise !</value>
   </data>
   <data name="valReqGIFBgColor.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* La couleur de fond pour les images GIF est requise !</value>
+    <value>La couleur de fond pour les images GIF est requise !</value>
   </data>
   <data name="valCompThumbnailWidth.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* Une valeur numérique est requise !</value>
+    <value>Une valeur numérique est requise !</value>
   </data>
   <data name="valReqThumbnailWidth.Text" xml:space="preserve">
-    <value>&lt;br/&gt;* La largeur de vignette est requise !</value>
+    <value>La largeur de vignette est requise !</value>
   </data>
   <data name="lblEnableImageCaching.Help" xml:space="preserve">
     <value>Cocher pour activer la mise en cache des images. Veuillez décocher lors de la mise forme de la boutique ou vous devrez attendre pendant la durée de mise en cache pour voir vos modifications (les paramètres concernés sont la taille de l'image et la couleur de fond des images GIF).</value>

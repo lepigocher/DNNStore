@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblEnableTax.Help" xml:space="preserve">
     <value>Si la case est cochée, le taux de taxe spécifié ci-dessous sera ajouté à la commande finale. Si les prix de vos produits sont saisis Hors Taxes, vous devez utiliser cette option et indiquer le montant de la TVA qui s'appliquera à l'ensemble des produits de la boutique. En revanche, si les prix sont Toutes Taxes Comprises, vous ne devez pas utiliser cette option. ATTENTION : si de vos produits sont saisis TTC et que cette case est cochée et le montant spécifié, la TVA sera ajoutée !</value>
@@ -132,7 +132,10 @@
   <data name="btnSaveTax.Text" xml:space="preserve">
     <value>Enregistrer les paramètres de taxes</value>
   </data>
-  <data name="lblErrorTax.Text" xml:space="preserve">
-    <value>Veuillez spécifier un taux de taxe valide en pourcentage&lt;/br&gt;(valeur numérique positive sans le signe pourcent).</value>
+  <data name="valCustTaxRate.Text" xml:space="preserve">
+    <value>Veuillez spécifier un taux de taxe valide en pourcentage (valeur numérique positive sans le signe pourcent).</value>
+  </data>
+  <data name="shTaxProvider.Text" xml:space="preserve">
+    <value>Gestion des taxes</value>
   </data>
 </root>
