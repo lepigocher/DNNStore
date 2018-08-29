@@ -1,13 +1,8 @@
-<h3>Release notes DNN Store 04.00.00</h3>
-<p>DNN Store 04.00.00 will work for any DNN version 7.4.2 and up and as been tested up to DNN 9.2.0</p>
-<p><strong>Enhancements</strong></p>
+<h3>Release notes DNN Store 04.00.01</h3>
+<p>DNN Store 04.00.01 will work for any DNN version 7.4.2 and up and as been tested up to DNN 9.2.1</p>
+<p><strong>Bugs corrected</strong></p>
 <ul>
-    <li>Reorganization of the source solution and projects. As a result the number of dll have been reduced from 29 to 13 files and the total size from 736 KB to 588 KB. Moreover the multi-vendors databases feature is removed (first version of DAL), this was an old feature of DNN and only SQL Server is officialy supported now.</li>
-	<li>Replaced all deprecated references to old DNN APIs to make the module compatible with newer DNN versions.</li>
-	<li>Removed unused stored procedures.</li>
-	<li>Updated all admin forms to comply with DNN 6 UI standards.</li>
+    <li>Changed the CPU supported from 32bits to Any CPU in the Atos gateway provider because this seems to be no longer supported by DNN 09.02.01!</li>
 </ul>
-<p><strong>New Features</strong></p>
-<ul>
-	<li>Added a new module Store Services to allow cart management with web services. This modules load a JS script and allow admin to pass options to the script as a JSON object.</li>
-</ul>
+<h2>IMPORTANT</h2p>
+<p>This will be the last version of the Store module. Please consider to migrate to something else for your projects. <strong>THIS MODULE IS NO LONGER SUPPORTED!</strong></p>

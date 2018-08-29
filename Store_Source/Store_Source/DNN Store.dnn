@@ -1,6 +1,6 @@
 <dotnetnuke type="Package" version="5.0">
     <packages>
-        <package name="DotNetNuke.Store Admin" type="Module" version="4.0.0">
+        <package name="DotNetNuke.Store Admin" type="Module" version="4.0.1">
             <friendlyName>Store Admin</friendlyName>
             <description>DotNetNuke® Store is a rich module suite which enables you to sell products on your DNN site. Out of the box support for Authorize.Net, PayPal, Systempay, Atos SIPS or email; includes categories, products, mini cart, full shopping cart, reviews, order history and user provided gateways.</description>
             <iconFile />
@@ -203,7 +203,7 @@
                         <script type="UnInstall">
                             <path>Providers\DataProviders\SqlDataProvider</path>
                             <name>Uninstall.sqldataprovider</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </script>
                     </scripts>
                 </component>
@@ -233,67 +233,67 @@
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Core.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.API.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.WebControls.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.SkinObjects.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Providers.Address.DefaultAddressProvider.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Providers.Tax.DefaultTaxProvider.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Providers.Tax.CountryTaxProvider.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Providers.Shipping.DefaultShippingProvider.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Core.Cart.EmailProvider.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Core.Cart.AuthorizeNetProvider.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Core.Cart.PayPalProvider.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Core.Cart.AtosProvider.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                         <assembly>
                             <path>bin</path>
                             <name>DotNetNuke.Modules.Store.Core.Cart.SystempayProvider.dll</name>
-                            <version>04.00.00</version>
+                            <version>04.00.01</version>
                         </assembly>
                     </assemblies>
                 </component>
@@ -596,7 +596,7 @@
                 </component>
             </components>
         </package>
-        <package name="DotNetNuke.Store Account" type="Module" version="4.0.0">
+        <package name="DotNetNuke.Store Account" type="Module" version="4.0.1">
             <friendlyName>Store Account</friendlyName>
             <description>The Store Account module provides customer account, cart and checkout functionality.</description>
             <iconFile />
@@ -703,7 +703,7 @@
                 </component>
             </components>
         </package>
-        <package name="DotNetNuke.Store Catalog" type="Module" version="4.0.0">
+        <package name="DotNetNuke.Store Catalog" type="Module" version="4.0.1">
             <friendlyName>Store Catalog</friendlyName>
             <description>The Store Catalog module provides product lists and product detail functionality.</description>
             <iconFile />
@@ -997,7 +997,7 @@
                 </component>
             </components>
         </package>
-        <package name="DotNetNuke.Store Mini Cart" type="Module" version="4.0.0">
+        <package name="DotNetNuke.Store Mini Cart" type="Module" version="4.0.1">
             <friendlyName>Store Mini Cart</friendlyName>
             <description>The Store Mini-Cart module provides the small summary of the customer's cart items.</description>
             <iconFile />
@@ -1156,7 +1156,7 @@
                 </component>
             </components>
         </package>
-        <package name="DotNetNuke.Store Menu" type="Module" version="4.0.0">
+        <package name="DotNetNuke.Store Menu" type="Module" version="4.0.1">
             <friendlyName>Store Menu</friendlyName>
             <description>The Store Menu module provides the menu containing product categories.</description>
             <iconFile />
@@ -1240,7 +1240,7 @@
                 </component>
             </components>
         </package>
-        <package name="DotNetNuke.Store Services" type="Module" version="4.0.0">
+        <package name="DotNetNuke.Store Services" type="Module" version="4.0.1">
             <friendlyName>Store Services</friendlyName>
             <description>The Store Services module provides infrastructure to create SPA using the Store API.</description>
             <iconFile />

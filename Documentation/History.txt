@@ -1,3 +1,18 @@
+Version 04.00.00
+
+Enhancements:
+
+- Reorganization of the source solution and projects. As a result the number of dll have been reduced from 29 to 13 files and the total size from 736 KB to 588 KB. Moreover the multi-vendors databases feature is removed (first version of DAL), this was an old feature of DNN and only SQL Server is officialy supported now.
+- Replaced all deprecated references to old DNN APIs to make the module compatible with newer DNN versions.
+- Removed unused stored procedures.
+- Updated all admin forms to comply with DNN 6 UI standards.
+
+
+New Features:
+
+- Added a new module Store Services to allow cart management with web services. This modules load a JS script and allow admin to pass options to the script as a JSON object.
+
+
 Version 03.02.01
 
 Enhancements:

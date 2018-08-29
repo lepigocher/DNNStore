@@ -1,3 +1,0 @@
-DesktopModules\Store\Thumbnail.aspx
-DesktopModules\Store\Thumbnail.aspx.cs
-DesktopModules\Store\Thumbnail.aspx.designer.cs
